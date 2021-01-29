@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="XR Design &amp; Development, Hunter College, Department of Film & Media Studies">
+    <meta name="author" content="Ricardo Miranda Zuniga">
+
+    <title>XR Design &amp; Development</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Custom styles for this page -->
+    <style type="text/css">
+
+    #class1, #class2, #class3, #class4, #class5, #class6, #class7, #class8, #class9, #class10, #class11, #class12, #class13, #class14, #class15 { padding-top: 50px}
+    .dropdown-menu .dropdown-item { border-bottom: 1px dotted; border-color: #bfbfbf; }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container">
+      <a class="navbar-brand" href="#">XR Production</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Syllabus</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="#class1">February 3</a>
+            <a class="dropdown-item" href="#class2">February 10</a>
+            <a class="dropdown-item" href="#class3">February 17</a>
+            <a class="dropdown-item" href="#class4">February 24</a>
+            <a class="dropdown-item" href="#class5">March 3</a>
+            <a class="dropdown-item" href="#class6">March 10</a>
+            <a class="dropdown-item" href="#class7">March 17</a>
+            <a class="dropdown-item" href="#class8">March 24</a>
+            <a class="dropdown-item">Spring Break 3/27-31</a>
+            <a class="dropdown-item" href="#class9">April 7</a>
+            <a class="dropdown-item" href="#class10">April 14</a>
+            <a class="dropdown-item" href="#class11">April 21</a>
+            <a class="dropdown-item" href="#class12">April 28</a>
+            <a class="dropdown-item" href="#class13">May 5</a>
+            <a class="dropdown-item" href="#class14">May 12</a>
+            <a class="dropdown-item" href="#class15">May 19</a>
+          </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student Blogs</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <a class="dropdown-item" href="#" target="_blank">Kastriot Bajrami </a>
+              <a class="dropdown-item" href="#" target="_blank">Zu ER Guan</a>
+              <a class="dropdown-item" href="#" target="_blank">Derek Lee</a>
+              <a class="dropdown-item" href="#" target="_blank">Eric Llivicura</a>
+              <a class="dropdown-item" href="#" target="_blank">Nora Lotfy</a>
+              <a class="dropdown-item" href="#" target="_blank">Michael Osorio</a>
+              <a class="dropdown-item" href="#" target="_blank">Yudelis Paredes</a>
+              <a class="dropdown-item" href="#" target="_blank">Ella Marc Roy</a>
+              <a class="dropdown-item" href="#" target="_blank">Madison Tuccillo</a>
+              <a class="dropdown-item" href="#" target="_blank">Joseph Urbina</a>
+              <a class="dropdown-item" href="#" target="_blank">Shellan Ward</a>
+              <a class="dropdown-item" href="#" target="_blank">Eva Yan</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student Sites</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="#" target="_blank">Kastriot Bajrami </a>
+              <a class="dropdown-item" href="#" target="_blank">Zu ER Guan</a>
+              <a class="dropdown-item" href="#" target="_blank">Derek Lee</a>
+              <a class="dropdown-item" href="#" target="_blank">Eric Llivicura</a>
+              <a class="dropdown-item" href="#" target="_blank">Nora Lotfy</a>
+              <a class="dropdown-item" href="#" target="_blank">Michael Osorio</a>
+              <a class="dropdown-item" href="#" target="_blank">Yudelis Paredes</a>
+              <a class="dropdown-item" href="#" target="_blank">Ella Marc Roy</a>
+              <a class="dropdown-item" href="#" target="_blank">Madison Tuccillo</a>
+              <a class="dropdown-item" href="#" target="_blank">Joseph Urbina</a>
+              <a class="dropdown-item" href="#" target="_blank">Shellan Ward</a>
+              <a class="dropdown-item" href="#" target="_blank">Eva Yan</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Technical Resources</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <a class="dropdown-item" href="https://aframe.io/" target="_blank">A-Frame</a>
+              <a class="dropdown-item" href="https://sparkar.facebook.com/ar-studio/" target="_blank">Spark AR</a>
+              <a class="dropdown-item" href="https://unity3d.com/learn" target="_blank">Unity Learning</a>
+              <a class="dropdown-item" href="https://docs.unity3d.com/Manual/" target="_blank">Unity User Manual</a>
+              <a class="dropdown-item" href="https://docs.unity3d.com/Manual/HOWTO-ArtAssetBestPracticeGuide.html" target="_blank">Art Asset Best Practices</a>
+              <a class="dropdown-item" href="https://docs.unity3d.com/ScriptReference/index.html" target="_blank">Scripting C#</a>
+              <a class="dropdown-item" href="http://unity3d.com/showcase/gallery" target="_blank">Unity Gallery</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Game Assets</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <a class="dropdown-item" href="https://assetstore.unity.com/" target="_blank">Unity Asset Store</a>
+              <a class="dropdown-item" href="https://www.mixamo.com/" target="_blank">Mixamo</a>
+              <a class="dropdown-item" href="https://www.textures.com/" target="_blank">textures.com</a>
+              <a class="dropdown-item" href="https://www.turbosquid.com/" target="_blank">TurboSquid</a>
+              <a class="dropdown-item" href="https://freestocktextures.com/photos-ground/" target="_blank">Free Stock Textures</a>
+              <a class="dropdown-item" href="https://freesound.org/" target="_blank">Free Sounds</a>
+              <a class="dropdown-item" href="https://www.looperman.com/" target="_blank">Looperman</a>
+              <a class="dropdown-item" href="https://ericskiff.com/music/" target="_blank">Resistor Anthems</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inspiration</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+              <a class="dropdown-item" href="https://itch.io" target="_blank">itch.io</a>
+              <a class="dropdown-item" href="https://simmer.io/" target="_blank">simmer.io</a>
+              <a class="dropdown-item" href="http://igf.com/" target="_blank">Indie Game Festival</a>
+              <a class="dropdown-item" href="http://www.gamesforchange.org/" target="_blank">Games for Change</a>
+              <a class="dropdown-item" href="https://www.play-nyc.com/" target="_blank">Play NYC</a>
+              <hr>
+              &nbsp;&nbsp;Indie Game Makers
+              <a class="dropdown-item" href="https://brid.gs/" target="_blank">bridgs</a>
+              <a class="dropdown-item" href="http://www.tinytouchtales.com" target="_blank">Tiny Touch Tales</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h2>XR Design &amp; Development, Wednesday 10:10am-1pm, Ricardo Miranda</h2>
+        <h3>Office Hours: M 4-6PM, Tu 10AM-12PM @ (347)450-1677</h3>
+        <p>XR Design &amp; Development is a studio-based production course that introduces students to augmented reality and  virtual reality production.  Employing popular and readily available software, students will build skills in prototyping and building AR and VR applications and other digital artifacts such as effects and filters through a series of demonstrations and exercises. These emerging technologies will be explored as tools for storytelling and visual creativity.  Analytical readings regarding extended realities will also be assigned.</p>
+        <p><strong>Due to COVID-19, this course is entirely online.  The first half of each class will be live demonstration and discussion.  The second half of each class may be asynchronious - I will remain online, available to work with students individually or in groups.  Students may elect to log off and work independently.<br><br>
+        Students who participate in this class with their camera on or use a profile image are agreeing to have their video or image recorded solely for the purpose of creating a record for students enrolled in the class to refer to, including those enrolled students who are unable to attend live. If you are unwilling to consent to have your profile or video image recorded, be sure to keep your camera off and do not use a profile image. Likewise, students who un-mute during class and participate orally are agreeing to have their voices recorded. If you are not willing to consent to have your voice recorded during class, you will need to keep your mute button activated and communicate exclusively using the "chat" feature, which allows students to type questions and comments live.</strong></p>
+      </div>
+
+      <!-- learning outcomes -->
+    <div id="outcomes">
+      <h2>Expected Learning Outcomes:</h2>
+        <ol>
+          <li>Introductory to intermediate understanding of current augmented and virtual reality production tools</li>
+          <li>Understand the preparation of a diverse set of assets for XR design and production</li>
+          <li>Apply XR production with CSS, HTML and JavaScript</li>
+          <li>Apply XR production with a game engine</li>
+          <li>Distinguish important characteristics of XR development as an immersive creative and storytelling medium</li>
+        </ol>
+    </div>
+
+      <!-- course work -->
+    <div id="work">
+      <h2>Method of Evaluation:</h2>
+        <dl>
+
+          <dd><strong>1. Course Blog (10% of grade):</strong> Using a blog publishing platform such as <a href="https://wordpress.com/" target="_blank">WordPress</a> or <a href="https://medium.com/" target="_blank">Medium</a> maintain a weekly blog (one entry per week of the session) that relates directly to the course analytical readings.  Blog entries should be brief 1-3 paragraphs that disect assigned readings or non-techinical material presented in class.</dd>
+          <br />
+
+<dd><strong>2. Technical Exercises (20% of grade)</strong> will be executed through the semester by following in class demonstrations, online tutorials and/or assigned readings.  These exercises will be essential for learning markup and coding and to successfully complete more complex projects.</dd>
+<br />
+
+<dd><strong>3. Projects (35% of grade)</strong>: A-Frame 10%, Spark AR 5%, Unity Project 1 FPC &amp; Environment 10%; Unity Project 2 Interactives 10%</dd>
+<br />
+
+<dd><strong>4. Quizzes (15% of grade)</strong> 3 quizzes will be taken through the course session.</dd>
+<br />
+
+<dd><strong>5. Final Project (10% of grade)</strong> due during Final Week of Classes
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Full Project Proposal - Abstract and 1000-2000 Word Description
+<br />&nbsp;&nbsp;&nbsp;&nbsp;For websites and applications hand in Wireframe and Sitemap</dd>
+<br />
+<dd><strong>6. Class Participation (10% of grade):</strong> Please arrive to class on time.  Please do the assigned readings and come to class prepared to share your reflections - active and informed discussion makes the course more interesting for everyone.  Attendance to all classes is required and attendance is taken at each class.  Please arrive on time.</dd>
+</dl>
+<p>Course Projects will be evaluated by three components equally: Creativity, Technical Breadth, Professional Presentation.  Completed projects should reflect a sense of ambition and dedication toward realization.</p>
+    </div>
+
+    <!-- materials -->
+    <div id="materials">
+      <h2>Materials and Texts</h2>
+      <h3>Required Materials:</h3> <p>USB flash drive or external hard drive. BACK UP ALL YOUR WORK!</p>
+
+<h3>Required Viewing / Reading:</h3>
+  <ul>
+    <li><a href="http://rmz.nyc/books/hamletOnTheHolodeck.pdf" target="_blank"><u>Hamlet on the Holodeck</u></a> by Janet Murray, 1997/2016 The Free Press</li>
+    <li><a href="http://rmz.nyc/books/unityInAction_2ndEdition.pdf" target="_blank"><u>Unity in Action</u></a> by Joseph Hocking, 2018 Manning Press</li>
+    <li><a href="http://rmz.nyc/books/theLanguageOfGraphicDesign.pdf" target="_blank"><u>The Launguage of Graphic Design</u></a> by Richard Poulin, 2011 Rockport Publisihing</li>
+
+    <li><a href="https://learn.unity.com/" target="_blank">Unity Learn</a>, please create an account as tutorials will be assigned as homework from the Unity Learn site.
+  </ul>
+    </div>
+
+    <div id="labs">
+      <h2>Hunter Assistance &amp; Policies</h2>
+      <!--<p><strong>Computer Labs</strong><br />
+Besides the grad lab and lounge, there are several labs available at Hunter to complete homework assignments.  The schedule for this lab will be posted outside the entrance and <a href="http://fm.hunter.cuny.edu/labs/month.php" target="_blank" rel="external">online</a>. Other labs available: <a href="http://www.hunter.cuny.edu/icit/about-icit/icit-groups/public-computing-services/computer-labs-pacs/computer-labs-pacs" target="_blank" rel="external">ICIT 10th Floor labs</a></p>-->
+
+<p><strong>Academic Integrity Statement</strong><br />
+  Academic integrity is a guiding principle of the Hunter College learning community because all students should have the opportunity to learn and perform on a level playing field. Academic dishonesty includes, but is not limited to, cheating, plagiarism, obtaining an unfair advantage, and falsifying records or documents whether intentional or not.<br>
+  Hunter College upholds the right to promote academic integrity on its campus as an educational institution of the City University of New York. The College has the responsibility to review all charges of academic dishonesty and implement sanctions, including, but not limited to, failing the course, official transcript notation, suspension or expulsion from the College when it has been determined that academic dishonesty did occur..</p>
+
+<p><strong>ADA Statement</strong><br />
+In compliance with the American Disability Act of 1990 (ADA) and with Section 504 of the Rehabilitation Act of 1973, Hunter College is committed to ensuring educational parity and accommodations for all students with documented disabilities and/or medical conditions. It is recommended that all students with documented disabilities (Emotional, Medical, Physical, and/or Learning) consult the Office of Accessibility located in Room E1124 to secure necessary academic accommodations. For further information and assistance, please call (212) 772-4857 or (212) 650-3230. If you have registered with the Office of Accessibility, please let me know at the start of the term.</p>
+
+<p><strong>Hunter College Policy on Sexual Misconduct</strong><br />
+In compliance with the CUNY Policy on Sexual Misconduct, Hunter College reaffirms the prohibition of any sexual misconduct, which includes sexual violence, sexual harassment, and gender-based harassment retaliation against students, employees, or visitors, as well as certain intimate relationships. Students who have experienced any form of sexual violence on or off campus (including CUNY-sponsored trips and events) are entitled to the rights outlined in the Bill of Rights for Hunter College.<br>
+
+a. Sexual Violence: Students are strongly encouraged to immediately report the incident by calling 911, contacting NYPD Special Victims Division Hotline (646-610-7272) or their local police precinct, or contacting the College's Public Safety Office (212-772-4444).<br>
+b. All Other Forms of Sexual Misconduct: Students are also encouraged to contact the College's Title IX Campus Coordinator, Dean John Rose (jtrose@hunter.cuny.edu or 212-650-3262) or Colleen Barry (colleen.barry@hunter.cuny.edu or 212-772-4534) and seek complimentary services through the Counseling and Wellness Services Office, Hunter East 1123.  <a href="http://www.hunter.cuny.edu/diversityandcompliance/repository/files/cuny-policy-on-sexual-misconduct.pdf" target="_blank">CUNY Policy on Sexual Misconduct</a></p>
+
+
+<p><strong>Emergency/Crisis Info:</strong> A division of Student Affairs <a href="http://www.hunter.cuny.edu/cws" target="_blank">Counseling &amp; Wellness Services</a> provides resources aimed at enhancing student quality of life, including crisis counseling. Counseling Services is operating remotely for counseling services at no cost to all Hunter students. You can <a href=" http://www.hunter.cuny.edu/studentservices/counseling-and-wellness" target="_blank">make an appointment</a> or via email at <a href="mailto:PersonalCounseling@hunter.cuny.edu">PersonalCounseling@hunter.cuny.edu</a>.</p><!--This is a list of numbers, which you can use if there is an emergency or crisis situation on the Hunter campus or if you need assistance at other times. <br />
+
+  Security -B125 West - 772 – 4444; <br />
+  Medical Office - Room 307 North - 772 – 4800 (During business hours) Office of Student Services - 1119 East - 772 – 4882 4891 (crisis counseling available), The Women's Center - 801 East - 772 – 4931.</p>-->
+
+</div>
+
+<hr />
+
+<!-- SYLLABUS -->
+<div id="syllabus">
+<h2>Course Syllabus</h2>
+<p>The schedule and course outline is subject to change.</p>
+</div>
+
+<div id="class1" class="row">
+<div class="col-md-12">
+<h3>Class 01 February 3rd</h3>
+<ul>
+<li><a href="../ima752/week01.html" target="_blank">Course Introduction</a></li>
+<li>Create/Sign Into Accounts: <a href="http://fm.hunter.cuny.edu/resources/support/accessing-your-undergraduate-home-directory/" target="_blank">F&amp;M Account</a> and <a href="https://glitch.com/" target="_blank">Glitch</a> OR <a href="https://github.com/" target="_blank">GitHub</a></li>
+<li>Using: <a href="https://help.github.com/en/github/getting-started-with-github/create-a-repo" target="_blank">Create a repo</a>; <a href="https://pages.github.com/" target="_blank">Github Pages</a>; <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages" target="_blank">About github.io</a>; <a href="https://choosealicense.com/" target="_blank">Choosing a License</a></li>
+<li><a href="" target="_blank">A-Frame Demo</a></li>
+<li><a href="" target="_blank">Zoom Recording</a></li>
+</ul>
+
+<h4>Due by Next Class</h4>
+
+<strong>Reading:</strong>
+  <ul type="square">
+    <li>Analytical: from <u>Race After Technology</u>, <a href="http://rmz.nyc/ima752/theory/raceAfterTech_Ch5.pdf" target="_blank">Chapter 5 Retooling Solidarity, Reimagining Justice</a></li>
+    <li>Technical: <a href="https://aframe.io/docs/1.1.0/introduction/" target="_blank">A-Frame Introduction</a></li>
+    <li>Technical: <a href="https://aframe.io/docs/1.1.0/introduction/vr-headsets-and-webvr-browsers.html" target="_blank">VR Headsets &amp; WebVR Browsers</a></li>
+    <li>Technical: <a href="https://aframe.io/docs/1.1.0/guides/building-a-basic-scene.html" target="_blank">Building a Basic Scene</a></li>
+  </ul>
+
+<strong>Assignment:</strong>
+  <ul type="square">
+    <li>Blog (due next class): Create a CMS website using WordPress or tumblr or SquareSpace, Wix or Drupal... (Please email me your link at least a day before next class.)</li>
+    <li>Blog Entry: Reflections on <u>Chapter 5 Retooling Solidarity, Reimagining Justice</u></li>
+    <li>Setup and Github or Glitch account and access your FM server</li>
+    <li>Setup a course homepage where you will provide links to all your work, including the blog.</li>
+    <li>Due in two weeks: A-Frame Environment.  Decide on a social issue of interest i.e. Racial Justice, Living through COVID-19, 2020 Presidential Elections... and sketch out a few prompts to conduct an audio interview with a family or friend.  Use the interview to inform a visual landscape.  Use the A-Frame and Photoshop templates to construct a landscape that includes audio and one or more 3D objects.</li>
+  </ul>
+</div>
+</div>
+
+<hr />
+
+<div id="class2" class="row">
+<div class="col-md-12">
+<h3>Class 02 - February 10th</h3>
+<ul>
+<li>A-Frame Image Tracking &amp; Geolocation</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, Introduction: A Book Lover Longs For Cyberdrama
+Preface to the 2016 eBook: The Future of Narrative, Revisited</li>
+  <li>Technical: <br />
+    &nbsp; &nbsp; <a href="https://aframe.io/blog/arjs3/" target="_blank">Image Tracking and Location-Based AR with A-Frame and AR.js 3</a><br />
+    &nbsp; &nbsp; <a href="https://aframe.io/docs/1.1.0/introduction/interactions-and-controllers.html" target="_blank">Interactions & Controllers</a>
+  </li>
+</ul>
+<strong>Assignment:</strong>
+<ul><li>A-Frame Environment</li><ul>
+</div>
+</div>
+<hr />
+
+<div id="class3" class="row">
+<div class="col-md-12">
+<h3>Class 03 - February 17th</h3>
+<ul>
+<li>Introduction to Spark AR</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, 1. Lord Burleigh’s Kiss, 2016 Update</li>
+  <li>Technical: <br />
+    &nbsp; &nbsp; <a href="https://sparkar.facebook.com/ar-studio/learn/getting-started" target="_blank">Getting Started</a><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://sparkar.facebook.com/ar-studio/learn/tutorials/introduction-to-spark-ar-studio" target="_blank">1. Finding Your Way Around the Interface</a><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://sparkar.facebook.com/ar-studio/learn/tutorials/replacing-the-background/" target="_blank">2. Replacing the Background</a><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://sparkar.facebook.com/ar-studio/learn/tutorials/creating-a-face-tracking-effect" target="_blank">3. Creating a Face Tracking Effect</a><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://sparkar.facebook.com/ar-studio/learn/tutorials/creating-a-face-tracking-effect" target="_blank">Using the Spark AR Studio Face Reference Assets</a><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://youtu.be/cLQVGv8gG90" target="_blank">4. Spark AR: Instagram Filters - How to use gifs as Sprite Sheets</a><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://sparkar.facebook.com/ar-studio/learn/articles/mirroring/ar-player" target="_blank">5. Mirroring Effects to AR Player (use the Spark AR Player)</a>
+  </li>
+</ul>
+<strong>Assignment:</strong>
+<ul><li>Due next week - Instagram Face Tracking Effect - Create a series of icons or emojis representing the passing of time.  Add the symbols as a clock along the perimeter of user's face.</li><ul>
+</div>
+</div>
+<hr />
+
+<div id="class4" class="row">
+<div class="col-md-12">
+<h3>Class 04 - February 24th</h3>
+<ul>
+<li>Introduction to Unity</li>
+<li>Eva Davidova</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, 2. Harbingers of the Holodeck, 2016 Update</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapters 1 &amp; 2</li>
+  <strong>-- OR --</strong><br />
+<li>Create with Code</li>
+&nbsp; &nbsp;Getting Started, 30 mins<br />
+&nbsp; &nbsp;Tutorial Course Introduction<br />
+&nbsp; &nbsp;Tutorial Lesson 1 - Install Unity Software<br />
+&nbsp; &nbsp;Unit 1 - Player Control<br />
+&nbsp; &nbsp;Tutorial Unit 1 - Introduction, 5 mins<br />
+&nbsp; &nbsp;Tutorial Lesson 1.1 - Start your 3D Engines, 1 hr 20 min<br />
+&nbsp; &nbsp;Tutorial Lesson 1.2 - Pedal to the Metal, 1 hr 10 min
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class5" class="row">
+<div class="col-md-12">
+<h3>Class 05 - March 3rd</h3>
+<ul>
+<li>Unity</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, 3. From Additive to Expressive Form, 2016 Update</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapter</li>
+  <strong>-- OR --</strong><br />
+  <li>Create with Code</li>
+  &nbsp; &nbsp;TutorialLesson 1.3 - High Speed Chase, 50 mins<br />
+  &nbsp; &nbsp;TutorialLesson 1.4 - Step into the Driver's Seat, 50 mins<br />
+  &nbsp; &nbsp;Lab 1 - Project Design Document 1 hr 30 mins
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class6" class="row">
+<div class="col-md-12">
+<h3>Class 06 - March 10th</h3>
+<ul>
+  <li>Ziyana Wu</li>
+  <li>Unity</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, 4. Immersion, 2016 Update</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapter</li>
+  <strong>-- OR --</strong><br />
+  <li>Create with Code</li>
+  &nbsp; &nbsp;Unit 2 - Basic Gameplay<br />
+  &nbsp; &nbsp;TutorialUnit 2 - Introduction, 5 mins<br />
+  &nbsp; &nbsp;TutorialLesson 2.1 - Player Positioning, 1 hr<br />
+  &nbsp; &nbsp;TutorialLesson 2.2 - Food Flight, 1 hr 10 mins<br />
+  &nbsp; &nbsp;TutorialLesson 2.3 - Random Animal Stampede, 1 hr</li>
+  <br/>
+  <li><strong>Advanced:</strong><br />
+    <a href="https://learn.unity.com/tutorial/setting-up-ar-foundation" target="_blank">Setting Up AR Foundation, 20 mins</a>
+  </li>
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class7" class="row">
+<div class="col-md-12">
+<h3>Class 07 - March 17th</h3>
+<ul>
+<li>Unity</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, 5. Agency, 2016 Update</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapter</li>
+  <strong>-- OR --</strong><br />
+  <li>Create with Code<br />
+    &nbsp; &nbsp;TutorialLesson 2.4 - Collision Decisions, 50 mins<br />
+    &nbsp; &nbsp;TutorialChallenge 2 - Play Fetch, 1 hr<br />
+    &nbsp; &nbsp;TutorialLab 2 - New Project with Primitives, 1 hr
+  </li>
+  <br />
+  <li><strong>Advanced:</strong><br />
+    <a href="https://learn.unity.com/project/ar-hello-world" target="_blank">AR Hello World</a>
+  </li>
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class8" class="row">
+<div class="col-md-12">
+<h3>Class 08 - March 24th</h3>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, 6. Transformation, 2016 Update</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapter</li>
+  <strong>-- OR --</strong><br />
+  <li>Create with Code<br />
+    &nbsp; &nbsp;Unit 3 - Sound and Effects<br />
+      &nbsp; &nbsp;TutorialUnit 3 - Introduction, 5 mins<br />
+      &nbsp; &nbsp;TutorialLesson 3.1 - Jump Force, 1 hr 30 mins<br />
+      &nbsp; &nbsp;TutorialLesson 3.2 - Make the World Whiz By, 1 hr 10 mins<br />
+      &nbsp; &nbsp;TutorialLesson 3.3 - Don't Just Stand There, 1 hr
+    </li>
+    <br />
+    <li><strong>Advanced:</strong><br />
+      Get Started with VR Beginner: The Escape Room (Unity 2020.2)
+    </li>
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class9" class="row">
+<div class="col-md-12">
+<h3>Class 09 - April 7th</h3>
+<ul>
+<li>Unity</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, 7. The Cyberbard and the Multiform Plot, 2016 Update</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapter</li>
+  <strong>-- OR --</strong><br />
+  <li>Create with Code<br />
+      &nbsp; &nbsp;TutorialLesson 3.4 - Particles and Sound Effects, 1 hr<br />
+      &nbsp; &nbsp;TutorialChallenge 3 - Balloons, Bombs, & Booleans, 1 hr<br />
+      &nbsp; &nbsp;TutorialLab 3 - Player Control, 1 hr
+  </li>
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class10" class="row">
+<div class="col-md-12">
+<h3>Class 10 - April 14th</h3>
+<ul>
+<li>Unity</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, 8. Eliza’s Daughters, 2016 Update</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapter</li>
+  <strong>-- OR --</strong><br />
+  <li>Create with Code<br />
+      &nbsp; &nbsp;Unit 4 - Gameplay Mechanics<br />
+      &nbsp; &nbsp;TutorialUnit 4 - Introduction, 5 mins<br />
+      &nbsp; &nbsp;TutorialLesson 4.1 - Watch Where You’re Going, 1 hr<br />
+      &nbsp; &nbsp;TutorialLesson 4.2 - Follow the Player, 1 hr<br />
+      &nbsp; &nbsp;TutorialLesson 4.3 - PowerUp and CountDown, 1 hr
+  </li>
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class11" class="row">
+<div class="col-md-12">
+<h3>Class 11 - April 21st</h3>
+<ul>
+<li>Unity</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, 9. Digital TV and the Emerging Formats of Cyberdrama, 2016 Update</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapter</li>
+  <strong>-- OR --</strong><br />
+  <li>Create with Code<br />
+      &nbsp; &nbsp;TutorialLesson 4.4 - For-Loops For Waves, 50 mins<br />
+      &nbsp; &nbsp;TutorialChallenge 4 - Soccer Scripting, 1 hr<br />
+      &nbsp; &nbsp;TutorialLab 4 - Basic Gameplay, 1 hr 30 mins
+  </li>
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class12" class="row">
+<div class="col-md-12">
+<h3>Class 12 - April 28th</h3>
+<ul>
+<li>Unity</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical: from <u>Hamlet on the Holodeck</u>, 10. Hamlet on the Holodeck?, 2016 Update</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapter</li>
+  <strong>-- OR --</strong><br />
+  <li>Create with Code<br />
+      &nbsp; &nbsp;Unit 5 - User Interface<br />
+      &nbsp; &nbsp;Tutorial Unit 5 - Introduction, 5 mins<br />
+      &nbsp; &nbsp;Tutorial Lesson 5.1 - Clicky Mouse, 1 hr<br />
+      &nbsp; &nbsp;Tutorial Lesson 5.2 - Keeping Score, 1 hr 10 mins<br />
+      &nbsp; &nbsp;Tutorial Lesson 5.3 - Game Over, 1 hr 10 mins
+  </li>
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class13" class="row">
+<div class="col-md-12">
+<h3>Class 13 - May 5th</h3>
+<ul>
+<li>Unity</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical:</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapter</li>
+  <strong>-- OR --</strong><br />
+  <li>Create with Code<br />
+      &nbsp; &nbsp;Tutorial Lesson 5.4 - What’s the Difficulty?, 1 hr<br />
+      &nbsp; &nbsp;Tutorial Challenge 5 - Whack-a-Food, 1 hr 30 mins<br />
+      &nbsp; &nbsp;Tutorial Lab 5 - Swap out your Assets
+  </li>
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class14" class="row">
+<div class="col-md-12">
+<h3>Class 14 - May 12th</h3>
+<ul>
+<li>Unity</li>
+<ul>
+<h4>Due by Next Class</h4>
+<strong>Reading:</strong>
+<ul type="square">
+  <li>Analytical:</li>
+  <li>Technical: from <u>Unity in Action</u>, Chapter</li>
+  <strong>-- OR --</strong><br />
+  <li>Create with Code
+      &nbsp; &nbsp;Next Steps
+      &nbsp; &nbsp;Tutorial Next Steps - Introduction, 5 mins
+      &nbsp; &nbsp;Tutorial Lesson 6.1 - Project Optimization, 30 mins
+      &nbsp; &nbsp;Tutorial Lesson 6.2 - Research and Troubleshooting, 1 hr
+      &nbsp; &nbsp;Tutorial 6.3 - Sharing your Projects, 30 mins
+      &nbsp; &nbsp;Tutorial ECS Survival Guide, 10 mins
+</li>
+</ul>
+<strong>Assignment:</strong>
+</div>
+</div>
+<hr />
+
+<div id="class14" class="row">
+<div class="col-md-12">
+<h3>Final Projects due May 19th</h3>
+</div>
+</div>
+<hr />
+
+</div> <!-- /container -->
+</main>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  </body>
+</html>
