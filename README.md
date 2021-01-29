@@ -1,1 +1,2 @@
 # xrDev
+This is the syllabus for Hunter College CUNY, Department of Film & Media Studies "XR Design & Development" course. A production course that introduces students to augmented reality and  virtual reality production.  Employing popular and readily available software, students will build skills in prototyping and building AR and VR applications and other digital artifacts such as effects and filters through a series of demonstrations and exercises. 
