@@ -212,17 +212,18 @@ Want to give it a color:
 <section>
   <h3>A-Frame Demo: Assets</h3>
   <p>To use the asset management system for an image texture:</p>
+  <!-- img src online - https://i.imgur.com/mYmmbrp.jpg -->
   <pre>
   <code>
   &lt;a-scene&gt;
     &lt;a-assets&gt;
-      &lt;img<br />
-        id="stones"<br />
-        src="https://i.imgur.com/mYmmbrp.jpg"&gt;
-    &lt;/a-assets&gt;<br /><br />
-    &lt;a-box <br />
-    src="#stones" <br />
-    position="0 2 -5" <br />
+      &lt;img
+        id="stones"
+        src="img/sand.jpg" /&gt;
+    &lt;/a-assets&gt;
+    &lt;a-box
+    src="#stones"
+    position="0 2 -5"
     rotation="0 45 45"&gt;
     &lt;/a-box&gt;
   &lt;/a-scene&gt;
