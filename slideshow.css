@@ -29,6 +29,24 @@ table, th, td {
 
 code { color: red; font-size: 1.2em; }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+}
+
+.flexbox > div {
+  background-color: white;
+  margin: 10px;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
