@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hunter College Media Studies">
+    <meta name="author" content="Ricardo Miranda Zuniga">
+
+    <style>
+    body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  margin:20px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+</style>
+
+</head>
+
+<body><h1>Intro to Unity for Image Tracking Using Vuforia</h1>
+<p>
+  Image Size<br />
+  Images sized between 500 and 1000 pixels in each direction (width or height) are within the optimal range for achieving high-performing recognition and tracking.
+</p>
+<p>Aspect Ratio (1:1)<br />
+Images with a squarish aspect ratio (around 1:1) are the ideal proportion for optimal AR results.
+Other aspect ratios such as 3:4, 2:3 up to 16:9, however, will also perform well.
+</p>
+<p>
+Image Contrast (high)<br />
+Images with high local contrast and a large amount of rich textured areas are best suited for reliable detection and tracking.
+</p>
+<p>
+Use a photo editing tool to increase the contrast of a low-contrast target image to improve detection and tracking quality. Keep in mind that the digital and printed version of the image should be the same file.
+</p>
+<p>
+Distribution of textured areas (even)<br />
+Images with evenly distributed textured areas are good candidates for reliable detection and tracking. This might be the hardest part to be in control of and often can’t be changed.
+</p>
+<p>
+Whitespace (minimum)<br />
+Single-colored areas or smooth color transitions often found in backgrounds do not exhibit graphical information suitable for detection and tracking.
+Crop the most prominent part of your image to use as the target image.
+</p>
+<p>
+Vector-based graphics<br />
+Logos and vector-based graphics usually consist of very few areas with high local contrast and/or textured structures and are, therefore, hard to detect and track.
+Try adding additional elements to the graphic such as a logotype or other elements.
+</p>
+<p>
+Images with a lot of text<br />
+Images consisting primarily of large areas of text are hard to detect and track.
+Try to have at least some graphical material and/or images next to your text for your target image.
+</p>
+<p>
+Repetitive patterns<br />
+Repetitive patterns exhibit the same graphical information at each feature point and therefore cannot be localized reliably.<br />
+Images with slightly irregular structures can convey a similar information to the target audience while providing enough unique feature points to be detected.<br />
+Try a different selection of your image including non-patterned parts or use images with irregular patterns.
+</p>
+<p>Google's Android <a href="https://developers.google.com/ar/develop/c/augmented-images" target="_blank">Image Tracking Recommendations</a></p>
+</body>
+</html>
