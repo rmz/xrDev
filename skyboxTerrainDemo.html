@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hunter College Media Studies">
+    <meta name="author" content="Ricardo Miranda Zuniga">
+
+    <link href="slideshow.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="slideshow-container">
+
+    <section class="fade">
+      <h1>Unity: 3D Template vs URP</h1>
+      <p>3D Template - 42.1 MB (Assets 7KB)<br /><br />
+        Universal Render Pipeline - 150.2 MB (Assets 18MB, ExampleAssets 17.7MB and other assets and libraries)
+      </p>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Skybox &amp; Terrain Tools</h1>
+      <p>Packages for today:</p>
+      <ul>
+        <li>Via the Asset Store: Standard Assets (we'll be using the first person controller)</li>
+        <li>Via the Package Manager look for the Advanced tab at the top center of the Package Manager and turn on Show Preview Packages: Terrain Tools (allows us to customize the terrain object)</li>
+        <li>Via the Asset Store: Terrain Tools Sample Asset Pack</li>
+        <li>Via the Asset Store: Low-Poly Simple Nature Pack</li>
+      </ul>
+      <p>Learning resources: <u>Unity in Action</u>, Chapter 4; <a href="https://youtu.be/PDKZXjyhwh0" target="_blank">Introducing the Terrain Editor, Unite Now 2020</a> (approximately 1 hour)</p>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Standard Assets</h1>
+      <p>When importing the Standard Assets to your project, we'll only be using the First Person Controller, so you do not need to import everything.  The following will be sufficient:<br />
+      <img src="img/standardAssets.png" alt="Unity Standard Assets" /></p>
+      <p>NOTE: Old code error on SimpleActivatorMenu.cs - line 12 fix: <br />
+      public UnityEngine.UI.Text camSwitchButton;</p>
+      <p>File naming - keywords reserved by Unity and should not be used to name folders or files: Resources, Plugins, Editor, and Gizmos.</p>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Art Assets, Unity in Action pg 82</h1>
+      <table>
+        <tr>
+          <td><strong>2D image</strong></td>
+        </tr>
+        <tr>
+          <td>Flat pictures. To make a real-world analogy, 2D images are like paintings and photographs.  PNG is recommended
+          </td>
+        </tr>
+        <tr>
+          <td><strong>3D Model</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>3D virtual objects (almost a synonym for mesh objects). To make a real-world analogy, 3D models are like sculptures.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Material</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>A packet of information that defines the surface properties of any object that the material is attached to. These surface properties can include color, shininess, and even subtle roughness.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Animation</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>Packets of information that define the movement of the associated object. These are detailed movement sequences created ahead of time, as opposed to code that calculates positions on the fly.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Particle System</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>An orderly mechanism for creating and controlling large numbers of small moving objects. Many visual effects, like fire, smoke, or spraying water, are created this way.
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Textures</h1>
+      <p>Textures should be sized in powers of 2. For reasons of technical efficiency, graphics chips like to handle textures in sizes that are 2N: 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048... In your image editor (Photoshop, GIMP...), scale the downloaded image to 256 x 256, and save it as a PNG.</p>
+      <p>Textures can be part of materials, and materials are applied to geometry.  material is a set of information defining the properties of a surface; that information can include a texture to display on that surface.  Typically each texture goes with a different material, so for convenience Unity allows you to drop a texture onto an object and then it creates a new material automatically. That is, if you drag a texture from Project view onto an object in the scene, Unity will create a new material and apply the new material to the object.
+      </p>
+      <p>Texture coordinates are an extra set of values for each vertex that assign polygons to areas of the texture image. Think about it like wrapping paper; the 3D model is the box being wrapped, the texture is the wrapping paper, and the texture coordinates represent where on the wrapping paper each side of the box will go.  From Unity in Action: texture coordinates in appendix C.</p>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Textures</h1>
+      <p>Albedo (technical term for the base color, all the shadows and highlights have been removed)<br />
+        Diffuse<br />
+        Normal Map<br />
+        Mask Map<br />
+        <img src="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@7.1/manual/Images/MaskMapAndDetailMap3.png" width="400" /><br />
+        <a href="https://help.poliigon.com/en/articles/1712652-what-are-the-different-texture-maps-for" target="_blank">What are the different texture maps for?</a>;   <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterDetail.html" target="_blank">Secondary Maps and Detail Mask</a>
+      </p>
+      <p>When adjusting tiling on a game object, make sure you’re setting the tiling of the main map and not the secondary map (this material supports a secondary texture map for advanced effects).  The reason for secondary maps is to allow the material to have sharp detail when viewed up close, while also having a normal level of detail when viewed from further away, without having to use a single extremely high texture map to achieve both goals.</p>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Skybox, Unity in Action Chapter 4</h1>
+      <p>New Material, Shader > Skybox > 6 Sided</p>
+      <p>A skybox is a cube surrounding the camera with pictures of the sky on each side. No matter what direction the camera is facing, it’s looking at a picture of the sky.</p>
+      <p>Select imported texture to see its properties in the Inspector, and change the Wrap Mode setting from Repeat to Clamp.  Be sure to click Apply. Ordinarily, textures can be tiled repeatedly over a surface; for this to appear seamless, opposite edges of the image bleed together. But this blending of edges can create faint lines in the sky where images meet, so the Clamp setting will limit the boundaries of the texture and get rid of this blending.</p>
+      <p>Apply the new Skybox: Top Unity Menu - Window > Rendering > Lighting - select your new Skybox Material to apply it to the scene.</p>
+      <p>Toggle on or off in Effects button at top of Scene view.</p>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Create Natural Environment by Terrain Sculpting</h1>
+      <ol>
+        <li>In your Scene Hierarchy, Create Terrain</li>
+        <li>With Terrain selected, in the inspector click the padlock - the lock button - this way you can focus on creating your terrain and not worry about accidentally deselecting the terrain while you are sculpting it.</li>
+        <li>Inspector > Raise or Lower Terrain - uniform vs noisy brushes</li>
+        <li>Modify the Stroke:
+          <ul>
+            <li>Brush Strength - hold down A (how fast the brush works)</li>
+            <li>Brush Size - hold down S</li>
+            <li>Brush Spacing</li>
+            <li>Brush Rotation - hold down D</li>
+          </ul>
+        </li>
+        <li>Steps to think about when working on a Terrain:
+          <ul>
+            <li>Start with larger brush and larger area of Terrain</li>
+            <li>Mountains vs flat area vs water</li>
+            <li>Modify size and rotation as you go</li>
+            <li>Change Brush Mask as you go to diversify the landscape</li>
+          </ul>
+        </li>
+        <li>The Terrain game object offers many brushes to work with, a few examples are:
+          <ul>
+            <li>Brushes > Sculpt > Terrace and Terrace Controls - to create a terraced mountainscape</li>
+            <li>Erosion tool - Wind Erosion to mimic the effect of wind</li>
+            <li>Brushes > Sculpt > Bridge - control click two points to create a bridge from point A to point B - useful to create roads and bridges</li>
+            <li>Set Height - sets the height of the terrain, say for example you want to add a foundation for a structure or settlement, the Set Height will level the selected area - flatten it</li>
+          </ul>
+        </li>
+        <li>Create a neighboring terrain by selecting the Neighboring Terrain tab in the terrain component.  Click in the scene view to create an adjacent terrain.  This expands your terrain to create a more massive world with the adjacent terrains fluidly welded to your initial terrain.</li>
+      </ol>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Painting Terrain Textures</h1>
+      <li>Select the Paint Brush Tab in the Terrain Component</li>
+      <li>In the Inspector, scroll down to  > Add Layer - defaults from asset package - dirt, moss, rock, sand, scree (broken rock fragments at the base of mountain cliffs...), snow</li>
+      <li>Repeat to add each layer</li>
+      <li>Paint the textures onto the Terrain</li>
+      <li>Start with foundation layers such as rock and dirt and work up to the surface layers such as sand and snow.</li>
+      <li>Do so by selecting the various layers and their materials to build out environment.  Try different brush masks and stroke settings so that things aren't uniform.</li>
+      <li>Modifying tilling, duplicate a layer, such as rock, bring up the tilling size and overlay with the new layer</li>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Add Trees</h1>
+      <p>Speed tree asset file type is .spm - the file type interacts with wind. <a href="https://docs.unity3d.com/2019.4/Documentation/Manual/SpeedTree.html" target="_blank">Speed Tree Documentation</a>; <a href="https://store.speedtree.com/unity/" target="_blank">Speed Tree store and building tool</a>
+      <li>Terrain Inspector > Paint Trees > Edit Trees and add a tree prefab, such as Conifer_Desktop - comes with Standard Assets, bring tree density down to 20 or so, and paint trees.
+        <ul>
+          <li>Select the Tree Tab from the Terrain Component</li>
+          <li>Select Add Tree, such as the Conifer Desktop model</li>
+          <li>Configure the Brush Settings</li>
+          <li>Pain the Trees onto the scene</li>
+        </ul>
+      </li>
+      <li>Paint Details to add grass - Edit Details, add grass texture, search for grass, such as GrassFond01 - select a brush and start painting.
+        <ul>
+          <li>Select the Details Tab from the Terrain Component</li>
+          <li>Select add Detail</li>
+          <li>In the Add Grass Texture menu select one such as "GrassFron01AlbedoAlpha" texture</li>
+          <li>Use the brush to pain Grass onto the Terrain</li>
+        </ul>
+      </li>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Water</h1>
+      <p>Add Water to the Terrain</p>
+        <ul>
+          <li>In the Project Window locate the Assets > Standard Assets > Environment > Water > Water > Prefabs</li>
+          <li>Add the WaterProDaytime prefab to the scene</li>
+          <li>Position and scale the water (Water does not have physics by default, needs to be added)</li>
+        </ul>
+    </section>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+<script src="slideshow.js"></script>
+  </body>
+</html>
