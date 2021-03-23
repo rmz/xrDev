@@ -40,7 +40,7 @@
       <h1>Unity: Standard Assets</h1>
       <p>When importing the Standard Assets to your project, we'll only be using the First Person Controller, so you do not need to import everything.  The following will be sufficient:<br />
       <img src="img/standardAssets.png" alt="Unity Standard Assets" /></p>
-      <p>NOTE: Old code error on SimpleActivatorMenu.cs - line 12 fix: <br />
+      <p>NOTE: Old code error on SimpleActivatorMenu.cs - line 11 fix: <br />
       public UnityEngine.UI.Text camSwitchButton;</p>
       <p>File naming - keywords reserved by Unity and should not be used to name folders or files: Resources, Plugins, Editor, and Gizmos.</p>
     </section>
@@ -92,7 +92,7 @@
 
     <section class="fade">
       <h1>Unity: Textures</h1>
-      <p>Textures should be sized in powers of 2. For reasons of technical efficiency, graphics chips like to handle textures in sizes that are 2N: 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048... In your image editor (Photoshop, GIMP...), scale the downloaded image to 256 x 256, and save it as a PNG.  An excellent resource for textures - <a href="https://www.textures.com/" target="_blank">textures.com</a></p>
+      <p>Textures should be sized in powers of 2. For reasons of technical efficiency, graphics chips like to handle textures in sizes that are 2N: 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048... In your image editor (Photoshop, GIMP...), scale the downloaded image to 256 x 256, and save it as a PNG.  Excellent resource for textures - <a class="dropdown-item" href="https://texturehaven.com/" target="_blank">TextureHaven</a> and <a href="https://www.textures.com/" target="_blank">textures.com</a></p>
       <p>Textures can be part of materials, and materials are applied to geometry. A material is a set of information defining the properties of a surface; that information can include a texture to display on that surface.  Typically each texture goes with a different material, so for convenience Unity allows you to drop a texture onto an object and then it creates a new material automatically. That is, if you drag a texture from Project view onto an object in the scene, Unity will create a new material and apply the new material to the object.
       </p>
       <p>Texture coordinates are an extra set of values for each vertex that assign polygons to areas of the texture image. Think about it like wrapping paper; the 3D model is the box being wrapped, the texture is the wrapping paper, and the texture coordinates represent where on the wrapping paper each side of the box will go.  From Unity in Action: texture coordinates in appendix C.</p>
@@ -117,6 +117,7 @@
       <p>Select imported texture to see its properties in the Inspector, and change the Wrap Mode setting from Repeat to Clamp.  Be sure to click Apply. Ordinarily, textures can be tiled repeatedly over a surface; for this to appear seamless, opposite edges of the image bleed together. But this blending of edges can create faint lines in the sky where images meet, so the Clamp setting will limit the boundaries of the texture and get rid of this blending.</p>
       <p>Apply the new Skybox: Top Unity Menu - Window > Rendering > Lighting - select your new Skybox Material to apply it to the scene.</p>
       <p>Toggle on or off in Effects button at top of Scene view.</p>
+      <p>Alternatively, you could create a Procedural Sky - <a href="https://youtu.be/UIbkfVWYRWQ" target="_blank">Quick Tutorial for Unity 2017</a>, but works the same for Unity 2019.4 3D Template</p>
     </section>
 
     <section class="fade">
@@ -192,6 +193,15 @@
           <li>In the Project Window locate the Assets > Standard Assets > Environment > Water > Water > Prefabs</li>
           <li>Add the WaterProDaytime prefab to the scene</li>
           <li>Position and scale the water (Water does not have physics by default, needs to be added)</li>
+        </ul>
+    </section>
+
+    <section class="fade">
+      <h1>Unity: Free Asset Packs</h1>
+        <ul>
+          <li><a href="https://assetstore.unity.com/packages/3d/environments/industrial/rpg-fps-game-assets-for-pc-mobile-industrial-set-v2-0-86679" target="_blank">RPG/FPS Game Assets for PC/Mobile (Industrial Set v2.0)</a></li>
+          <li><a href="https://assetstore.unity.com/packages/3d/vegetation/trees/conifers-botd-142076" target="_blank">RPG/FPS Game Assets for PC/Mobile (Industrial Set v2.0)</a></li>
+          <li><a href="https://assetstore.unity.com/packages/3d/environments/sci-fi/snaps-prototype-sci-fi-industrial-136759" target="_blank">RPG/FPS Game Assets for PC/Mobile (Industrial Set v2.0)</a></li>    
         </ul>
     </section>
 
