@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hunter College Media Studies">
+    <meta name="author" content="Ricardo Miranda Zuniga">
+
+    <link href="slideshow.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="slideshow-container">
+
+    <section class="fade">
+      <h1>Project: Unity Environment</h1>
+      <div>
+          <img src="img/chalkroom.jpg" width="320" />
+          <img src="img/homestay.jpg" width="320" />
+          <img src="img/tomb.jpg" width="320" />
+          <img src="img/secretGarden.jpg" width="320" />
+          <img src="img/networkedEco.jpg" width="320" />
+          <p><a href="https://youtu.be/zHT016FbR30" target="_blank">Chalkroom</a>, 2017 by Laurie Anderson; <a href="https://www.paisleysmith.com/homestay" target="_blank">Homestay</a> by Paisley Smith; Tomb of the Unknown Marxist by Anna Ozbek; <a href="https://www.onx.studio/secret-garden" target="_blank">Secret Garden</a> by Stephanie Dinkins; <a href="https://networked-ecosystem.itch.io/networked-ecosystem" target="_blank">Networked Ecosystem</a>, 2021 by Mark Ramos and Ziyang Wu</p>
+      </div>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Unity Environment</h1>
+      <ul>
+        <li><a href="https://assetstore.unity.com/packages/tools/input-management/first-person-all-in-one-135316" target="_blank">First Person All-in-One</a>, <a href="https://youtu.be/LeFi2qKIzp4" target="_blank">overview</a></li>
+        <li><a href="https://creativepro.com/creating-seamless-textures-in-photoshop/" target="_blank">Creating Seamless Textures in Photoshop</a></li>
+        <li><a href="https://youtu.be/1mdR2imNeZI" target="_blank">Bump and Displacement Map: Overview</a></li>
+        <li><a href="https://unity3d.com/unity/features/worldbuilding/probuilder" target="_blank">ProBuilder 4.4 (2019); 4.5 (2020)</a></li>
+        <li><a href="https://docs.unity3d.com/Packages/com.unity.progrids@3.0/manual/index.html" target="_blank">ProGrids</a></li>
+        <li><a href="https://unity3d.com/unity/features/worldbuilding/polybrush" target="_blank">Polybrush</a> (a polygon and mesh based alternative to the Terrain)</li>
+        <li>LiDAR (light detection and ranging) Scanning <a href="https://youtu.be/FOxxqVzDaaA" target="_blank">simple overview</a></li>
+        <li>Unity Audio Player</li>
+        <li>Unity Video Player</li>
+        <li>Example of NavMesh</li>
+      </ul>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Unity Environment</h1>
+      <h2>Creating a Title Scene</h2>
+      <ol>
+        <li>Create a new scene and title simply and clearly</li>
+        <li>Change the skybox as you wish and add any visuals...</li>
+        <li>In the Hierarchy create UI > Canvas - this is a 2D element that covers the user's screen</li>
+        <li>To the Canvas add UI > Text - TextMeshPro as you wish - title, description...</li>
+        <li>To the Canvas add UI > Button - TextMeshPro and edit as you wish</li>
+          <ol>
+            <li>The Scripts folder has to scripts to change a scene - LoadLevelAfterTime and ChangeScene</li>
+            <li>In the Hierarchy create an empty game object and label LoadLevel</li>
+            <li>Add the two scripts to it - LoadLevelAfterTime and ChangeScene</li>
+            <li>Under  - Load Level After Time set the second delay that you wish and type in the name of the scene that should load</li>
+          </ol>
+        <li>Select the button in the Hierarchy and in its Inspector scroll down to the On Click () event, click the plus sign</li>
+        <li>Drag the LoadLevel game object from the Hierarchy into the field under Runtime Only</li>
+        <li>From the dropdown adjacent to Runtime Only select ChangeScene.name and again type in the name of the Scene the user is taken to upon click</li>
+        <li>For the button to work and scene changes to occur, all used scenes must be in the Build Settings - top menu File > Build Settings.  Drag and drop your scenes into the Scenes in Build, they should be in order of presentation starting at 0.</li>
+      </ol>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Unity Environment</h1>
+      <h2>Creating, Finding, Editing Textures</h2>
+      <p>As this is not a 3D graphics class, you may create your entire environment using the primitives that Unity provides and decorate them and give them meaning with your own textures.  Image dimensions for textures need to be in powers of 2 and are commonly square, i.e 2, 8, 16, 32, 64, 128, 256, 512, 1024...  You can have non-square Textures like 512 x 64, just as long as the size remains a power of 2.</p>
+      <h3>Image Resolution, <a href="https://docs.unity3d.com/Manual/class-TextureImporterOverride.html" target="_blank">recommended texture formats</a></h3>
+      <table>
+        <tr>
+          <td>Mobile</td>
+          <td>PC</td>
+        </tr>
+        <tr>
+          <td>Max 2048<br />(common for both mobile and PC)</td>
+          <td>2048, 4096, 8192, 16384<br />
+          HDR - high definition render packages commonly uses 4096<br />
+          <a href="https://docs.unity3d.com/Manual/ImportingTextures.html" target="_blank">recommendations according to graphics processing units (GPS)</td>
+        </tr>
+        <tr>
+          <td colspan="2">My recommendation is to stick with 2048 unless you are targeting high-end computers, then go with 4096.  You can always downsize, but you can not upgrade bitmaps without loss of quality</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Unity Environment</h1>
+      <h2>Editing Textures for Your Goals</h2>
+      <img src="img/textureEx0.jpg" /> >>> <img src="img/textureEx1.jpg" />
+      <p>In creating your environment, you are welcome to use any of the vast amounts of assets available online.  However, my expectation is that you will transform or customize the assets so that they are in line with your project and project goals.</p>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Unity Environment</h1>
+      <h2>Bump and Displacement Map: Photoshop 3D Filters</h2>
+      <p>Any psd, tiff, jpg, png, gif... (<a href="https://docs.unity3d.com/Manual/ImportingTextures.html" target="_blank">the full list</a>) may be used as a texture in Unity and applied as a material to a 3D object.  When you drag a 2d image to say a primitive such as a cube or sphere, Unity automatically generates a material based on the 2d image.  Unity automatically flattens multi-layer Photoshop PSD or TIFF files on import so that there is no size penalty for your game. This flattening happens to the imported data in Unity, not to the file itself, so you can continue to save and import your PSD or TIFF files without losing any of your work when using these file types natively.  For greater detail add normal and height maps to the material.</p>
+      <p><a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html" target="_blank">Normal Maps</a> use RGB channels to create the illusion of depth.  The dark to light values in each the Red, Green and Blue channels are used to have lighter areas pop out whereas dark values recede to create a visual representation of depth.</p>
+      <p><a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterHeightMap.html" target="_blank">Bump or Height Maps</a> use luminosity to create the illusion of depth.  Bump maps read light and dark areas - luminous values - white creates the illusion of pushing out the pixels - pushing them at your, black the illusion of pushing in the pixels away from you.  Although it is a 2D image, light and dark are used to simulate depth or as if it was a 3D object - as if it had depth on the z-index.</p>
+      <img src="img/ps_3dFilters.jpg" />
+      <p>The default settings for Blur (0.5) and Detail (80%) tend to work well, but you should experiment with different values and apply them in Unity to achieve the level of detail that you wish</p>
+    </section>
+
+    <section>
+      <h1>Project: Unity Environment</h1>
+      <h2>Audio and Video Player</h2>
+      <p>Unity supports these audio file types: .aif, .wav, .mp3, .ogg.  As with Photoshop files, Unity will compress the audio, so if you create an aiff or wav file, you should import it rather than compressing it to an mp3.</p>
+      <p>Unity supports a <a href="https://docs.unity3d.com/Manual/VideoSources-FileCompatibility.html" target="_blank">wide range of video file types</a>, i.e. .avi, .mov, .mp4, .ogv, .webm... However, the optimal codec is H.264.  I recommend a high quality mp4 using H.264 codec.</p>
+    </section>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+<script src="slideshow.js"></script>
+  </body>
+</html>
