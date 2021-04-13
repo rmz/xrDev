@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hunter College Media Studies">
+    <meta name="author" content="Ricardo Miranda Zuniga">
+
+    <link href="slideshow.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="slideshow-container">
+
+    <section class="fade">
+      <h1>Project: Environment Design Elements</h1>
+      <div class="flexbox">
+        <img src="img/blackHole.png" width="400" style="padding: 10px;"  alt="Design for cover" />
+        <p>Visualization still of a black hole</p>
+      </div>
+      <div class="flexbox">
+        <img src="img/precariatCover.png" width="400" style="padding: 10px;"  alt="Design for cover" />
+        <p>Design for podcast cover</p>
+      </div>
+      <div class="flexbox">
+        <img src="img/precariatLogo.png" width="400" style="padding: 10px;" alt="Design for logo across screens" />
+        <p>Design for logo across screens (256x256, 512x512, 1024x1024)</p>
+      </div>
+      <div class="flexbox">
+        <img src="img/precariatFavicon.png" width="400" style="padding: 10px;" alt="Design for favicon" />
+        <p>Design for favicon</p>
+      </div>
+      <div class="flexbox">
+        <img src="img/precariatReticle.png" width="400" style="padding: 10px;" alt="Design for reticle" />
+        <p>Design for reticle</p>
+      </div>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Environment Reticle</h1>
+      <div>
+        <img src="img/precariatReticle.png" width="70" height="70" style="margin: 0 20px 0 0; padding: 2px; border: 1px solid #999" alt="Design for reticle" />
+        <img src="img/reticleHeartDotted.png" width="70" height="70" style="margin: 0 0 0 20px; padding: 2px; border: 1px solid #999" alt="Design for reticle" />
+        <p>reticle: a pattern of fine lines or markings built into the eyepiece of a sighting device, such as a telescopic sight in a telescope...</p>
+        <p>I recommend a vector-based tool such as Illustrator as reticles are generally constructed from vector primitives - lines, circles, squares...  Reticles can commonly be 32x32 or 64x64 - they must be square or both values a multiple of 2.  I created a 64x64 Illustrator file and then tried different designs to eventually land on the images above for different projects.  I exported the illustration as a transparent 32x32 png and imported into my Assets > Texture file to then add to the First Person Controller's reticle field.</p>
+      </div>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Environment AI Navigation: NavMesh </h1>
+      <p>The <a href="https://docs.unity3d.com/2019.4/Documentation/Manual/com.unity.modules.ai.html" target="_blank">AI module</a> implements the path finding features in Unity.  Two key components of the AI module are the NavMesh with its building components and NavMesh Agents.  Together they present a powerful system to get non-player characters moving around.</p>
+      <p>Create a navigable environment, for example made of a ground game object and walls, or a path.  It's simplest to group your navigable environment, i.e. ground and walls into one empty game object.  This way you can select that game object with all its children to bake the NavMesh.
+      </p>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Environment AI Navigation: NavMesh </h1>
+      <p><strong>Window > AI > Navigation - four tabs: Agents, Areas, Bake, Object</strong></p>
+      <p>
+        Agents - movement controlled by NavMesh<br />
+Agent has four main properties to assign size and moving abilities - used by NavMesh to decide where they can and can't go.  The size of the agent is configured by a cylinder that reflects the width (radius) and height of your character.  You can decide on the height of steps accessible by the character and the gradient of slopes.  Humanoid is the default agent, however, you can add more agent types for the different scales of your characters. <a href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-NavMeshAgent.html" target="_blank">NavMesh Agent</a>
+      </p>
+      <p>Areas<br />
+        Areas tab is used to define different costs for different areas, for example water or mud could have a higher cost than 1 or 2. For example, if you set the cost of an area to 3, traveling across that area is considered to be three times longer than alternative routes. The cost is used by the AI to determine the fastest path to an end point.  Any area part can be included or excluded from the mesh.  The area types are specified in the Navigation Window’s Areas tab and there are 3 built-in types: Walkable, Not Walkable, and Jump.  There are upto 29 customizable types.  <a href="https://docs.unity3d.com/Manual/nav-AreasAndCosts.html" target="_blank">Navigation Areas and Costs</a></p>
+      <p>Bake<br />
+          Bake tab uses that Baked Agent size to determine navigable area, not the Agents that you set up in the Agents tab.  Humanoid is the only agent type defined in the NavMesh itself.<br />
+          Advanced > Voxel - data structure used to divide the world up before NavMesh is constructed.  The bigger the voxel size, the less details in the mesh.  Min Region Area should be between 2-4.  Make it higher to remove unwanted areas of the NavMesh.  <a href="https://docs.unity3d.com/Manual/nav-AdvancedSettings.html" target="_blank">Advanced NavMesh Bake Settings</a></p>
+      <p>Object<br />
+            Object tab used to select areas that should or should not be part of the NavMesh.</p>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Environment AI Navigation: NavMesh </h1>
+      <h2>Building a NavMesh</h2>
+      <ol>
+        <li>Open the Navigation Window - Window > AI > Navigation</li>
+        <li>Select scene geometry that should affect the navigation – walkable surfaces and obstacles.</li>
+        <li>In the Inspector or in the Navigation window, Object tab - check Navigation Static on to include selected objects in the NavMesh baking process.</li>
+        <li>Adjust the bake settings to match your agent size.  Baked Agent Size allows you to customize what is navigable and what is not - How wide the agents that is the game objects that are able to navigate the area.  If the agent radius is wider than an opening, then they can't move through it.  The height of the agent, default is 2 meters, about six feet.  Max slope of the hills it can walk up, if a hill has too steep an angle, above the angle you have set, it can't walk up it.  Step height, how tall walkable steps are step heights, climb angles.  <strong>Any changes to your environment require re-baking the NavMesh for your environment.</strong>
+          <ul>
+            <li>Agent Radius defines how close the agent center can get to a wall or a ledge.</li>
+            <li>Agent Height defines how low the spaces are that the agent can reach.</li>
+            <li>Max Slope defines how steep the ramps are that the agent walk up.</li>
+            <li>Step Height defines how high obstructions are that the agent can step on.</li>
+          </ul>
+        </li>
+        <li>Click bake to build the NavMesh.</li>
+      </ol>
+      <p><a href="https://docs.unity3d.com/Manual/nav-BuildingNavMesh.html" target="_blank">Building a NavMesh</a></p>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Environment AI Navigation: NavMesh </h1>
+      <h2>Making game objects into NavMesh Agents</h2>
+      <ul>
+        <li>Select your game objects that will be maintained within the NavMesh.</li>
+        <li>In its Inspector, create the tag AI and give the game object that tag.</li>
+        <li>Add Component: NavMesh Agent</li>
+        <li>Experiment with customizable elements of the agent such as change Speed to 10...</li>
+      </ul>
+      <p><a href="https://docs.unity3d.com/Manual/nav-CreateNavMeshAgent.html" target="_blank">Creating a NavMesh Agent</a></p>
+    </section>
+
+    <section class="fade">
+      <h1>Project: Environment AI Navigation: NavMesh </h1>
+      <ul>
+        <li>Learn Unity <a href="https://learn.unity.com/tutorial/navigation-mesh-introduction" target="_blank">NavMesh Introduction</a></li>
+        <li>Learn Unity <a href="https://learn.unity.com/tutorial/navmesh-agents" target="_blank">NavMesh Agents</a></li>
+        <li>Learn Unity <a href="https://learn.unity.com/tutorial/seek-and-flee" target="_blank">Seek &amp; Flee</a></li>
+      </ul>
+    </section>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <script src="slideshow.js"></script>
+  </body>
+</html>
