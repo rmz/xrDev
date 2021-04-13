@@ -116,6 +116,34 @@ Agent has four main properties to assign size and moving abilities - used by Nav
       </ul>
     </section>
 
+    <section class="fade">
+      <h1>Project: Environment AI Navigation: Adding Characters </h1>
+      <h2>Making game objects into NavMesh Agents</h2>
+      <p>The character in the demo has been downloaded from Mixamo along with the walking animation.  I had issues applying animations that were not downloaded with the Skin, so the walking animation was downloaded has part of a character.  When imported into Unity, if the colors/texture is not applied do the following: </p>
+        <ol>
+          <li>Select the character and in its Inspector > Materials tab - Extract Texture.  You will need to click Fix now for the Normal Maps.</li>
+          <li>And Extract Materials.</li>
+          <li>In the Rig tab, set Animation Type to Humanoid; Avatar Definition: Create From This Model and click Apply.</li>
+          <li>Add it to the hierarchy and right click it and select Unpack Prefab</li>
+        </ol>
+        
+      <p>Import and Unpack Animations</p>
+      <ul>
+        <li>Import any animations.  The ones in the demo are downloaded from Mixamo.</li>
+        <li>Break the animations from the mixamo object by selecting the animation packed in the downloaded file - the teal triangle and clicking command+D on Mac or control+D on PC and rename.</li>
+        <li>Select the Animation to see its attributes in the Inspector and Loop Time and Loop Pose.</li>
+        <li>In the Project > Assets > Character create Animator Controller and add the Walk animation to it.  (Add any other animations, for example if it's a standing character with multiple poses.)</li>
+      </ul>
+
+      <p>Add components to Character in Hierarchy</p>
+        <li>Add Component: Capsule Collider and configure to fit around the character. Center 0,1,0; Radius 0.5; Height 2.</li>
+        <li>Add Component: Animator for the Animation Controller, if it doesn't already have one.</li>
+        <li>Select your character in the game hierarchy and drag the new Aniamtion Controller into the Controller field.</li>
+        <li>Also apply the Avatar, if it's not already applied.</li>
+        <li>Add Component Nav Mesh Agent</li>
+      </ul>
+    </section>
+
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
