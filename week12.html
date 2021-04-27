@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hunter College Media Studies">
+    <meta name="author" content="Ricardo Miranda Zuniga">
+
+    <link href="slideshow.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="slideshow-container">
+
+    <section class="fade">
+      <h1>Unity C# Scripting Basic Interaction</h1>
+      <h2>Waypoints, NPC Controllers, Audio Mixer</h2>
+      <ul>
+        <li>Waypoints is defined as an intermediate point on a route or line of travel.  If you do not have buildings or barriers in an evironment, you may set up a simple waypoint system for a gameobject without use of the NavMesh system.  The demo script is based on this <a href="https://youtu.be/GIDz0DjhA4E" target="_blank">basic waypoints</a></li>
+        <li>However, if there are obstacles, it's best to create a NavMesh and give the NavMesh agents waypoints as described on this page with the code - <a href="https://docs.unity3d.com/Manual/nav-AgentPatrol.html" target="_blank">Patrol.cs</a></li>
+        <br />
+        <br />
+        <li>The "manaquin" and animations used in this demos are from <a href="https://www.mixamo.com/" target="_blank">Mixamo</a>.  Mixamo and Mecanim were introduced on <a href="https://rmz.github.io/xrDev/#class5" target="_blank">Class 05 - March 3rd</a>.  A couple points:
+        <ul>
+          <li>The manaquin used in this demo downloaded with the T-Pose as an animation, it appears to be an old file.  A way around this is to download character with initial animation - skin and animation.</li>
+          <li>When selecting animations, always turn on In Place before Download</li>
+          <li>Once imported into Unity, select your character and in Materials tab Extract Textures and Materials.</li>
+          <li>Command+D to break animations out of Mixamo object.  Rename them and delete the originally imported animations to clean up folder.  NOTE: breakoff animation required the Mixamo Avatar</li>
+        </ul>
+        </li>
+        <br />
+        <li>The demo had two "Chase" scripts - one for an idle character that comes moves when the player approaches and then attacks at a close proximity.  This scipt is titled "Chase.cs" and it is based on <a href="https://youtu.be/gXpi1czz5NA" target="_blank">Basic AI for NPC</a></li>
+        <li>The second script sets the non-player character immediately walking to a random direction and then will attack when the player approaches.  When the attack is done it sets off in a random direction.  This script is based on Unity in Action scripts and the above linked tutorial.  It is titled "ChaseAI.cs".</li>
+        <br />
+        <br />
+        <li><a href="https://docs.unity3d.com/Manual/AudioMixerOverview.html" target="_blank">An overview of the concepts and AudioMixer</a></li>
+        <li>This is a simple and clear <a href="https://youtu.be/wnZu0zUVARE" target="_blank">Audio Mixer tutorial</a> set in an environment to help demonstrate the power of using a mixer to manipulate sounds.</li>
+      </ul>
+    </section>
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <script src="slideshow.js"></script>
+  </body>
+</html>
