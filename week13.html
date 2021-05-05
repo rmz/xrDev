@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hunter College Media Studies">
+    <meta name="author" content="Ricardo Miranda Zuniga">
+
+    <link href="slideshow.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="slideshow-container">
+
+    <section class="fade">
+      <h1>Unity for VR</h1>
+      <h2>XR Interaction Toolkit</h2>
+      <p>VR and AR development has changed quickly over the past two years.  Two years basic interaction required a good deal more work and decision making than it currently does.  As Janet Murray emphasizes throughout <u>Hamlet on the Holodeck</u> as technology advances and the programmers and engineers build tools that facilitate the creation of new computer-based experiences, mediamakers and artists are  without extensive programming skills can create new experiences and forms of storytelling.  I wish that Unity's XR Interaction Toolkit had existed two years ago as countless hours of programming and wiring would have been saved...</p>
+      <p>An ideal way to jump in is <a href="https://learn.unity.com/tutorial/setting-up-a-vr-enabled-project-with-unity-and-the-xr-interaction-toolkit" target="_blank">Setting up a VR-Enabled Project with Unity and the XR Interaction Toolkit</a> that uses a prepared project: <a href="https://github.com/Unity-Technologies/XR-Interaction-Toolkit-Examples" target="_blank">Unity-Technologies XR-Interaction-Toolkit-Examples</a></p>
+    </section>
+
+    <section class="fade">
+      <h1>Unity for VR</h1>
+      <h2>XR Interaction Toolkit</h2>
+      <ul>
+        <li>Install from Package Manager > Unity Registry:
+        <br />XR Interaction Toolkit
+        <br />Oculus XR Plugin
+        </li>
+        <li>From the top menu go to Edit > Project Settings, click on XR Plugin Management, click on Android tab and select Oculus</li>
+        <li>Open the Build Settings, target Android as Oculus is an Android device</li>
+        <li>Click on Player Settings and in Other Settings set the minimum level to Android 6.0 'Marshmallow' (API level 23)</li>
+        <li>In Build Settings, if Oculus is connected select it in Run Device and click Build and Run</li>
+      </ul>
+      <p>This project will get quickly get you up and running.  However a tutorial that walks you step by step in creating varous forms of interaction is <a href="https://learn.unity.com/project/vr-beginner-the-escape-room" target="_blank">VR Beginner: The Escape Room</a> (this is a Universal Render Pipeline project), using this <a href="https://assetstore.unity.com/packages/templates/tutorials/vr-beginner-the-escape-room-163264" target="_blank">61MB package</a></p>
+      <p>There are of course third party VR Interaction Frameworks that may offer more ready-made scripts and interactivity.  One with high ratings and many reviews is <a href="https://assetstore.unity.com/packages/templates/systems/vr-interaction-framework-161066" target="_blank">VR Interaction Framework</a></p>
+    </section>
+
+    <section class="fade">
+      <h1>Unity for VR</h1>
+      <h2>Publishing Your Project</h2>
+      <ul>
+        <li>Edit > Project Settings</li>
+        <li>&nbsp;&nbsp;Company Name is web based with a URL extension i.e. .com, .net, .nyc, .edu...</li>
+        <li>&nbsp;&nbsp;Product Name</li>
+        <li>&nbsp;&nbsp;Version</li>
+        <li>&nbsp;&nbsp;Default Icon</li>
+        <li>&nbsp;&nbsp;Icon: 1024x1024, 512x512, 256x256, 128x128, 64x64, 48x48, 32x32, 16x16</li>
+        <li>&nbsp;&nbsp;Fullscreen Mode: Maximized Window, allow the user to select windowed vs fullscreen</li>
+      </ul>
+    </section>
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <script src="slideshow.js"></script>
+  </body>
+</html>
