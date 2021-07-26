@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Entity-Component - Registry</title>
+    <meta name="description" content="Entity-Component - Registry">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+    <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.tube@%5E3.5.x/dist/aframe-extras.tube.min.js"></script>
+    <style>
+    body { font-family: sans-serif; }
+      nav {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        border: 1px solid #000;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 5px;
+        z-index: 1000;
+        cursor: crosshair;
+      }
+      .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 100; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0,0,0,0.3);
+  }
+
+  /* Modal Content/Box - https://www.w3schools.com/howto/howto_css_modals.asp */
+  .modal-content {
+      background-color: rgba(256,256,256,0.6);
+      margin: 5vh auto; /* 15% from the top and centered */
+      padding: 10px;
+      border: 1px solid #000;
+  }
+  /* The Close Button */
+  .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: red;
+      text-decoration: none;
+      /*cursor: url('covid32.png'), default !important;*/
+  }
+    </style>
+  </head>
+  <body>
+    <nav><a data-modal="modal001">About</a></nav>
+    <div id="modal001" class="modal">
+  <div class="modal-content" style="width:600px; height:400px">
+    <a class="close">&times;</a>
+    <h1>Nica DAO</h1>
+    <p>The Mutation Wiki assembles research analysis of the potential to move funds from givers to receivers without the cost of middlemen such as charities. We ask: what international charities are moving money and how much does the CEO make? If we can by-pass the CEO salary and charity infrastructure, more money reaches directly to those who need it. We will create a comparative cost analysis of donation through crypto versus brick and mortar charities. This research will inform the creation of a visualization that makes explicit the trade-offs of using blockchain versus traditional charitable channels. This research will inform the possibility of initiating a means of direct donation to those in need. At this time, we seek to help the families of political prisoners in Nicaragua. We are compelled by the growing disparity of wealth between countries and considering how more equity may be possible through emerging technologies. However we are also highly dubious of these emerging financial technologies and who ultimate these technologies will serve.</p>
+    <p><a href="https://github.com/daseme/mutation/wiki/01-Introduction">Learn More</a>
+  </div>
+  </div>
+
+    <a-scene>
+
+      <a-assets>
+        <img
+          src="https://cdn.dribbble.com/users/2140/screenshots/3513187/artboard_2x.png"
+          id="cryptoSphere"
+          crossorigin="anonymous"
+        />
+      </a-assets>
+
+      <a-entity id="rain" particle-system="preset: rain; color: #24CAFF; particleCount: 5000"></a-entity>
+
+      <!--<a-entity id="robot" geometry="primitive: sphere"
+                material="color: #EFEFEF; shader: flat"
+                position="0 1 -5"
+                light="type: point; intensity: 3"
+                animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 2000; to: 0 -0.10 -5; loop: true"></a-entity>
+                  -->
+      <a-sphere position="0 1 -5" radius="1.6"
+        animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 2000; to: 0 -0.10 -5; loop: true"
+        src="#cryptoSphere"></a-sphere>
+
+        <a-link href="index.html" title="My Homepage" image="#homeThumbnail"></a-link>
+
+      <a-entity id="ocean" ocean="density: 20; width: 50; depth: 50; speed: 4"
+                material="color: #9CE3F9; opacity: 0.75; metalness: 0; roughness: 1"
+                rotation="-90 0 0"></a-entity>
+
+      <a-entity id="sky" geometry="primitive: sphere; radius: 5000"
+                material="shader: gradient; topColor: 235 235 245; bottomColor: 185 185 210"
+                scale="-1 1 1"></a-entity>
+
+      <a-entity id="light" light="type: ambient; color: #888"></a-entity>
+    </a-scene>
+
+    <!-- Modal 2D Box - https://www.w3schools.com/howto/howto_css_modals.asp  -->
+    <script>
+// Get the modal
+var modal = document.getElementById("modal001");
+
+// Get the button that opens the modal
+var btn = document.querySelector("nav");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+  </body>
+</html>
