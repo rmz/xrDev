@@ -10,7 +10,7 @@
     <title>XR Design &amp; Development</title>
 
     <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Custom styles for this page -->
     <style type="text/css">
@@ -22,71 +22,80 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <div class="container">
-      <a class="navbar-brand" href="#">XR Production</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-white">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="#">XR Production</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Syllabus</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="#class1">February 3</a>
-            <a class="dropdown-item" href="#class2">February 10</a>
-            <a class="dropdown-item" href="#class3">February 17</a>
-            <a class="dropdown-item" href="#class4">February 24</a>
-            <a class="dropdown-item" href="#class5">March 3</a>
-            <a class="dropdown-item" href="#class6">March 10</a>
-            <a class="dropdown-item" href="#class7">March 17</a>
-            <a class="dropdown-item" href="#class8">March 24</a>
-            <a class="dropdown-item">Spring Break 3/27-31</a>
-            <a class="dropdown-item" href="#class9">April 7</a>
-            <a class="dropdown-item" href="#class10">April 14</a>
-            <a class="dropdown-item" href="#class11">April 21</a>
-            <a class="dropdown-item" href="#class12">April 28</a>
-            <a class="dropdown-item" href="#class13">May 5</a>
-            <a class="dropdown-item" href="#class14">May 12</a>
-            <a class="dropdown-item" href="#class15">May 19</a>
-          </div>
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Syllabus</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <a class="dropdown-item" href="#class1">February 2</a>
+              <a class="dropdown-item" href="#class2">February 9</a>
+              <a class="dropdown-item" href="#class3">February 16</a>
+              <a class="dropdown-item" href="#class4">February 23</a>
+              <a class="dropdown-item" href="#class5">March 2</a>
+              <a class="dropdown-item" href="#class6">March 9</a>
+              <a class="dropdown-item" href="#class7">March 16</a>
+              <a class="dropdown-item" href="#class8">March 23</a>
+              <a class="dropdown-item" href="#class9">March 30</a>
+              <a class="dropdown-item" href="#class10">April 6</a>
+              <a class="dropdown-item" href="#class10">April 13</a>
+              <a class="dropdown-item">Spring Break 4/15-22</a>
+              <a class="dropdown-item" href="#class12">April 27</a>
+              <a class="dropdown-item" href="#class13">May 4</a>
+              <a class="dropdown-item" href="#class14">May 11</a>
+              <a class="dropdown-item" href="#class15">May 18</a>
+            </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student Blogs</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown03">
-              <a class="dropdown-item" href="https://www.tumblr.com/blog/view/skyemediablog" target="_blank">Skye Guan</a>
-              <a class="dropdown-item" href="https://derekleemedp29920.tumblr.com" target="_blank">Derek Lee</a>
-              <a class="dropdown-item" href="https://eric-xr-blog.tumblr.com/" target="_blank">Eric Llivicura</a>
-              <a class="dropdown-item" href="https://noramediathoughts.tumblr.com/" target="_blank">Nora Lotfy</a>
-              <a class="dropdown-item" href="https://www.tumblr.com/blog/view/dommiedomo94" target="_blank">Dominic Manley</a>
-              <a class="dropdown-item" href="https://michaeloxrdev.wordpress.com/" target="_blank">Michael Osorio</a>
-              <a class="dropdown-item" href="https://yudelisparedes779846585.wordpress.com/blog/" target="_blank">Yudelis Paredes</a>
-              <a class="dropdown-item" href="https://cramdesign.tumblr.com/tagged/medp299" target="_blank">Marc Ella</a>
-              <a class="dropdown-item" href="https://fmundergrad.hunter.cuny.edu/~urbinaj/xrDev/blog.html" target="_blank">Joseph Urbina</a>
-              <a class="dropdown-item" href="https://shellanw.tumblr.com/" target="_blank">Shellan Ward</a>
-              <a class="dropdown-item" href="https://evaxrblog.wordpress.com/" target="_blank">Eva Yan</a>
-            </div>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Student Blogs</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <a class="dropdown-item" href="" target="_blank">Mark Allman</a>
+              <a class="dropdown-item" href="" target="_blank">Christopher Chow</a>
+              <a class="dropdown-item" href="" target="_blank">Lauren Directo</a>
+              <a class="dropdown-item" href="" target="_blank">Nanae Itoi</a>
+              <a class="dropdown-item" href="" target="_blank">Kristy Lau</a>
+              <a class="dropdown-item" href="" target="_blank">Kevin Lee</a>
+              <a class="dropdown-item" href="" target="_blank">Kris Lee</a>
+              <a class="dropdown-item" href="" target="_blank">Amie Lin</a>
+              <a class="dropdown-item" href="" target="_blank">Emily Liu</a>
+              <a class="dropdown-item" href="" target="_blank">Latisha McCoy</a>
+              <a class="dropdown-item" href="" target="_blank">Rayhana Musa</a>
+              <a class="dropdown-item" href="" target="_blank">Rebecca Shrestha</a>
+              <a class="dropdown-item" href="" target="_blank">Yewon Song</a>
+              <a class="dropdown-item" href="" target="_blank">Sophiya Thulung</a>
+              <a class="dropdown-item" href="" target="_blank">Angie Xu</a>
+              <a class="dropdown-item" href="" target="_blank">Jason Zhao</a>
+            </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student Sites</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown04">
-              <a class="dropdown-item" href="https://fmundergrad.hunter.cuny.edu/~guanz/" target="_blank">Skye Guan</a>
-              <a class="dropdown-item" href="https://fmundergrad.hunter.cuny.edu/~leed/xrdev/index.html" target="_blank">Derek Lee</a>
-              <a class="dropdown-item" href="https://llivicura.github.io/xr-design/" target="_blank">Eric Llivicura</a>
-              <a class="dropdown-item" href="https://noralotfy.github.io/NoraXRDesign/index.html" target="_blank">Nora Lotfy</a>
-              <a class="dropdown-item" href="https://fmundergrad.hunter.cuny.edu/~manleyd/xrDev/" target="_blank">Dominic Manley</a>
-              <a class="dropdown-item" href="https://fmundergrad.hunter.cuny.edu/~osoriom/" target="_blank">Michael Osorio</a>
-              <a class="dropdown-item" href="https://fmundergrad.hunter.cuny.edu/~paredesy/medp29920/" target="_blank">Yudelis Paredes</a>
-              <a class="dropdown-item" href="https://fmundergrad.hunter.cuny.edu/~roym/xrDev/index.html" target="_blank">Marc Ella</a>
-              <a class="dropdown-item" href="https://fmundergrad.hunter.cuny.edu/~urbinaj/xrDev/index.html" target="_blank">Joseph Urbina</a>
-              <a class="dropdown-item" href="https://fmundergrad.hunter.cuny.edu/~wards/xrDev/index.html" target="_blank">Shellan Ward</a>
-              <!--<a class="dropdown-item" href="https://github.com/shellanward/xrDex" target="_blank">Shellan's Repo'</a>-->
-              <a class="dropdown-item" href="https://fmundergrad.hunter.cuny.edu/~yane/" target="_blank">Eva Yan</a>
-            </div>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Student Sites</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <a class="dropdown-item" href="" target="_blank">Jason Zhao</a>
+              <a class="dropdown-item" href="" target="_blank">Angie Xu</a>
+              <a class="dropdown-item" href="" target="_blank">Sophiya Thulung</a>
+              <a class="dropdown-item" href="" target="_blank">Yewon Song</a>
+              <a class="dropdown-item" href="" target="_blank">Rebecca Shrestha</a>
+              <a class="dropdown-item" href="" target="_blank">Rayhana Musa</a>
+              <a class="dropdown-item" href="" target="_blank">Latisha McCoy</a>
+              <a class="dropdown-item" href="" target="_blank">Emily Liu</a>
+              <a class="dropdown-item" href="" target="_blank">Amie Lin</a>
+              <a class="dropdown-item" href="" target="_blank">Kris Lee</a>
+              <a class="dropdown-item" href="" target="_blank">Kevin Lee</a>
+              <a class="dropdown-item" href="" target="_blank">Kristy Lau</a>
+              <a class="dropdown-item" href="" target="_blank">Nanae Itoi</a>
+              <a class="dropdown-item" href="" target="_blank">Lauren Directo</a>
+              <a class="dropdown-item" href="" target="_blank">Christopher Chow</a>
+              <a class="dropdown-item" href="" target="_blank">Mark Allman</a>
+            </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Technical Resources</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown03">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Technical Resources</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <a class="dropdown-item" href="https://aframe.io/" target="_blank">A-Frame</a>
               <a class="dropdown-item" href="https://sparkar.facebook.com/ar-studio/" target="_blank">Spark AR</a>
               <a class="dropdown-item" href="https://unity3d.com/learn" target="_blank">Unity Learning</a>
@@ -94,17 +103,18 @@
               <a class="dropdown-item" href="https://docs.unity3d.com/Manual/HOWTO-ArtAssetBestPracticeGuide.html" target="_blank">Art Asset Best Practices</a>
               <a class="dropdown-item" href="https://docs.unity3d.com/ScriptReference/index.html" target="_blank">Scripting C#</a>
               <a class="dropdown-item" href="http://unity3d.com/showcase/gallery" target="_blank">Unity Gallery</a>
-            </div>
+            </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Assets</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown03">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Assets</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <a class="dropdown-item" href="https://assetstore.unity.com/" target="_blank">Unity Asset Store</a>
               <a class="dropdown-item" href="https://sketchfab.com/" target="_blank">Sketchfab</a>
               <a class="dropdown-item" href="https://www.turbosquid.com/" target="_blank">TurboSquid</a>
               <a class="dropdown-item" href="https://www.mixamo.com/" target="_blank">Mixamo</a>
               <a class="dropdown-item" href="https://clara.io/library" target="_blank">Clara.io</a>
               <a class="dropdown-item" href="https://stock.adobe.com/3d-assets" target="_blank">Adobe Stock</a>
+              <a class="dropdown-item" href="https://opengameart.org/" target="_blank">OpenGameArt.Org</a>
               <strong>&nbsp;Texture &amp; Images</strong>
               <a class="dropdown-item" href="https://assetstore.unity.com/packages/2d/textures-materials/nature/terrain-textures-pack-free-139542" target="_blank">Terrain Textures Pack</a>
               <a class="dropdown-item" href="https://texturehaven.com/" target="_blank">TextureHaven</a>
@@ -117,11 +127,11 @@
               <a class="dropdown-item" href="https://freesound.org/" target="_blank">Free Sounds</a>
               <a class="dropdown-item" href="https://www.looperman.com/" target="_blank">Looperman</a>
               <a class="dropdown-item" href="https://ericskiff.com/music/" target="_blank">Resistor Anthems</a>
-            </div>
+            </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inspiration</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown02">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inspiration</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <a class="dropdown-item" href="https://itch.io" target="_blank">itch.io</a>
               <a class="dropdown-item" href="https://simmer.io/" target="_blank">simmer.io</a>
               <a class="dropdown-item" href="https://altvr.com/" target="_blank">AltspaceVR</a>
@@ -131,11 +141,9 @@
               <a class="dropdown-item" href="http://www.gamesforchange.org/" target="_blank">Games for Change</a>
               <a class="dropdown-item" href="https://www.aljazeera.com/interactives/" target="_blank">AlJazeera Interactive</a>
               <a class="dropdown-item" href="https://www.nytimes.com/section/multimedia" target="_blank">NY Times Multimedia</a>
-              <a class="dropdown-item" href="https://dribbble.com/" target="_blank">Dribble</a>
-
-            </div>
+              <a class="dropdown-item" href="https://dribbble.com/" target="_blank">Dribbble</a>
+            </ul>
           </li>
-
         </ul>
       </div>
     </div>
@@ -143,17 +151,15 @@
 
     <div class="container">
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h2>XR Design &amp; Development<br />
-          Wednesday 10:10am-1pm, Ricardo Miranda</h2>
-        <h3>
-          TXT @ (347)450-1677; email: rmira@hunter.cuny.edu<br />
-          Office Hours for Class (email to setup): Thur 12-1pm;<br />
-          Media Advising Use Navigate: M 4-6PM, Tu 10AM-12PM</h3>
-        <p>MEDP 29920 XR Design &amp; Development is a production course that introduces students to augmented reality and  virtual reality production.  Employing popular and readily available software, students will build skills in prototyping and building AR and VR applications and other digital artifacts such as effects and filters through a series of demonstrations and exercises. These emerging technologies will be explored as tools for storytelling and visual creativity.  Analytical readings regarding extended realities will also be assigned.</p>
-        <p><strong>Due to COVID-19, this course is entirely online.  One portion of each class will be live demonstration and discussion.  A second portion of each class may be asynchronious - I will remain online, available to work with students individually or in groups.  Students may elect to log off and work independently.<br><br>
-        Students who participate in this class with their camera on or use a profile image are agreeing to have their video or image recorded solely for the purpose of creating a record for students enrolled in the class to refer to, including those enrolled students who are unable to attend live. If you are unwilling to consent to have your profile or video image recorded, be sure to keep your camera off and do not use a profile image. Likewise, students who un-mute during class and participate orally are agreeing to have their voices recorded. If you are not willing to consent to have your voice recorded during class, you will need to keep your mute button activated and communicate exclusively using the "chat" feature, which allows students to type questions and comments live.</strong></p>
+      <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h3>XR Design &amp; Development<br />
+          Wednesday 10:10am-1pm, Hunter North 432, Ricardo Miranda<br />
+          email: rmira@hunter.cuny.edu<br />
+          Office Hours: Thursday 2-3pm or by appointment, HN 433</h3>
+        <p>MEDP 29920 XR Design &amp; Development is an in-person production course that introduces students to augmented reality and  virtual reality production.  Employing popular and readily available software, students will build skills in prototyping and building AR and VR applications and other digital artifacts such as effects and filters through a series of demonstrations and exercises. These emerging technologies will be explored as tools for storytelling and visual creativity.  Analytical readings regarding extended realities will also be assigned.</p>
+        <p><strong>Due to the ongoing pandemic, please remain attentive to your school emails.  If a reason to toggle from in-person to virtual arises, I will communicate via email any changes to class.</strong></p>
+      </div>
       </div>
 
       <!-- learning outcomes -->
@@ -174,7 +180,7 @@
       <h3>Expect to spend 4-6 hours per week outside of class doing the course work</h3>
         <dl>
 
-          <dd><strong>1. Course Blog (10% of grade):</strong> Using a blog publishing platform such as <a href="https://wordpress.com/" target="_blank">WordPress</a> or <a href="https://medium.com/" target="_blank">Medium</a> maintain a weekly blog (one entry per week) that relates directly to the course analytical readings.  Blog entries should be brief 1-3 paragraphs that disect assigned readings.</dd>
+          <dd><strong>1. Course Blog (10% of grade):</strong> Using a blog publishing platform such as <a href="https://wordpress.com/" target="_blank">WordPress</a> or <a href="https://medium.com/" target="_blank">Medium</a> or any platform that you chose to maintain a weekly blog (one entry per week) that relates directly to the course analytical readings.  Blog entries should be brief 1-3 paragraphs that disect assigned readings.  Email your blog one day before the second class.</dd>
           <br />
 
 <dd><strong>2. Technical Exercises (20% of grade)</strong> will be executed through the semester by following in class demonstrations, online tutorials and/or assigned readings.  These exercises will be essential to learning markup, coding, software and to successfully complete more complex projects.  All exercises must be uploaded and available online.  Create a course index page with links to exercises and projects.</dd>
@@ -198,23 +204,23 @@
 
 <h3>Required Viewing / Reading:</h3>
   <ul>
-    <li><a href="http://rmz.nyc/books/hamletOnTheHolodeck.pdf" target="_blank"><u>Hamlet on the Holodeck</u></a> by Janet Murray, 1997/2016 The Free Press</li>
+    <li><a href="http://rmz.nyc/books/hamletOnTheHolodeck.pdf" target="_blank"><u>Hamlet on the Holodeck</u></a> by Janet Murray, 1997/2016 The Free Press (read through Chapter 6)</li>
     <li><a href="http://rmz.nyc/books/unityInAction_2ndEdition.pdf" target="_blank"><u>Unity in Action</u></a> by Joseph Hocking, 2018 Manning Press<br />
     &nbsp;&nbsp;<a href="http://rmz.nyc/xrDev" target="_blank">Code for Unity in Action</a>; <a href="https://fmundergrad.hunter.cuny.edu/~mirandar/xrDev/" target="_blank">back up drive</a></li>
-    <li><a href="http://rmz.nyc/books/theLanguageOfGraphicDesign.pdf" target="_blank"><u>The Launguage of Graphic Design</u></a> by Richard Poulin, 2011 Rockport Publisihing</li>
-    <li><a href="https://aframe.io/aframe-school/" target="_blank">A-Frame School</a></li>
+    <li><a href="https://aframe.io/" target="_blank">A-Frame School</a></li>
     <li><a href="https://learn.unity.com/" target="_blank">Unity Learn</a>, please create an account as tutorials will be assigned as homework from the Unity Learn site.</li>
+    <li>Additional articles or essays be assigned throughout the semester.</li>
+    <li>Related reference:  <a href="http://rmz.nyc/books/theLanguageOfGraphicDesign.pdf" target="_blank"><u>The Launguage of Graphic Design</u></a> by Richard Poulin, 2011 Rockport Publisihing</li>
   </ul>
     </div>
 
     <div id="labs">
       <h2>Hunter Assistance &amp; Policies</h2>
-      <!--<p><strong>Computer Labs</strong><br />
-Besides the grad lab and lounge, there are several labs available at Hunter to complete homework assignments.  The schedule for this lab will be posted outside the entrance and <a href="http://fm.hunter.cuny.edu/labs/month.php" target="_blank" rel="external">online</a>. Other labs available: <a href="http://www.hunter.cuny.edu/icit/about-icit/icit-groups/public-computing-services/computer-labs-pacs/computer-labs-pacs" target="_blank" rel="external">ICIT 10th Floor labs</a></p>-->
+      <p><strong>Computer Labs</strong><br />
+<!--Besides the grad lab and lounge, there are several labs available at Hunter to complete homework assignments.-->  The schedule for this lab will be posted outside the entrance. Other labs available: <a href="http://www.hunter.cuny.edu/icit/about-icit/icit-groups/public-computing-services/computer-labs-pacs/computer-labs-pacs" target="_blank" rel="external">ICIT 10th Floor labs</a>.  Due to COIVD access may be limited, so please check what is posted on these labs' doors.</p>
 
 <p><strong>Academic Integrity Statement</strong><br />
-  Academic integrity is a guiding principle of the Hunter College learning community because all students should have the opportunity to learn and perform on a level playing field. Academic dishonesty includes, but is not limited to, cheating, plagiarism, obtaining an unfair advantage, and falsifying records or documents whether intentional or not.<br>
-  Hunter College upholds the right to promote academic integrity on its campus as an educational institution of the City University of New York. The College has the responsibility to review all charges of academic dishonesty and implement sanctions, including, but not limited to, failing the course, official transcript notation, suspension or expulsion from the College when it has been determined that academic dishonesty did occur..</p>
+  Hunter College regards acts of academic dishonesty (e.g., plagiarism, cheating on examinations, obtaining unfair advantage, and falsification of records and official documents) as serious offenses against the values of intellectual honesty. The College is committed to enforcing the CUNY Policy on Academic Integrity and will pursue cases of academic dishonesty according to the Hunter College Academic Integrity Procedures.</p>
 
 <p><strong>ADA Statement</strong><br />
 In compliance with the American Disability Act of 1990 (ADA) and with Section 504 of the Rehabilitation Act of 1973, Hunter College is committed to ensuring educational parity and accommodations for all students with documented disabilities and/or medical conditions. It is recommended that all students with documented disabilities (Emotional, Medical, Physical, and/or Learning) consult the Office of Accessibility located in Room E1124 to secure necessary academic accommodations. For further information and assistance, please call (212) 772-4857 or (212) 650-3230. If you have registered with the Office of Accessibility, please let me know at the start of the term.</p>
@@ -223,13 +229,13 @@ In compliance with the American Disability Act of 1990 (ADA) and with Section 50
 In compliance with the CUNY Policy on Sexual Misconduct, Hunter College reaffirms the prohibition of any sexual misconduct, which includes sexual violence, sexual harassment, and gender-based harassment retaliation against students, employees, or visitors, as well as certain intimate relationships. Students who have experienced any form of sexual violence on or off campus (including CUNY-sponsored trips and events) are entitled to the rights outlined in the Bill of Rights for Hunter College.<br>
 
 a. Sexual Violence: Students are strongly encouraged to immediately report the incident by calling 911, contacting NYPD Special Victims Division Hotline (646-610-7272) or their local police precinct, or contacting the College's Public Safety Office (212-772-4444).<br>
-b. All Other Forms of Sexual Misconduct: Students are also encouraged to contact the College's Title IX Campus Coordinator, Dean John Rose (jtrose@hunter.cuny.edu or 212-650-3262) or Colleen Barry (colleen.barry@hunter.cuny.edu or 212-772-4534) and seek complimentary services through the Counseling and Wellness Services Office, Hunter East 1123.  <a href="http://www.hunter.cuny.edu/diversityandcompliance/repository/files/cuny-policy-on-sexual-misconduct.pdf" target="_blank">CUNY Policy on Sexual Misconduct</a></p>
+b. All Other Forms of Sexual Misconduct: Students are also encouraged to contact the College's Title IX Campus Coordinator, Dean John Rose (jtrose@hunter.cuny.edu or 212-650-3262) or Colleen Barry (colleen.barry@hunter.cuny.edu or 212-772-4534) and seek complimentary services through the Counseling and Wellness Services Office, Hunter East 1123.  <a href="https://www.cuny.edu/wp-content/uploads/sites/4/page-assets/about/administration/offices/legal-affairs/policies-resources/Sexual-Misconduct.pdf" target="_blank">CUNY Policy on Sexual Misconduct</a></p>
 
 
-<p><strong>Emergency/Crisis Info:</strong> A division of Student Affairs <a href="http://www.hunter.cuny.edu/cws" target="_blank">Counseling &amp; Wellness Services</a> provides resources aimed at enhancing student quality of life, including crisis counseling. Counseling Services is operating remotely for counseling services at no cost to all Hunter students. You can <a href=" http://www.hunter.cuny.edu/studentservices/counseling-and-wellness" target="_blank">make an appointment</a> or via email at <a href="mailto:PersonalCounseling@hunter.cuny.edu">PersonalCounseling@hunter.cuny.edu</a>.</p><!--This is a list of numbers, which you can use if there is an emergency or crisis situation on the Hunter campus or if you need assistance at other times. <br />
+<p><strong>Emergency/Crisis Info:</strong> A division of Student Affairs <a href="http://www.hunter.cuny.edu/cws" target="_blank">Counseling &amp; Wellness Services</a> provides resources aimed at enhancing student quality of life, including crisis counseling. Counseling Services is operating remotely for counseling services at no cost to all Hunter students. You can <a href=" http://www.hunter.cuny.edu/studentservices/counseling-and-wellness" target="_blank">make an appointment</a> or via email at <a href="mailto:PersonalCounseling@hunter.cuny.edu">PersonalCounseling@hunter.cuny.edu</a>.  This is a list of numbers, which you can use if there is an emergency or crisis situation on the Hunter campus or if you need assistance at other times. <br />
 
   Security -B125 West - 772 – 4444; <br />
-  Medical Office - Room 307 North - 772 – 4800 (During business hours) Office of Student Services - 1119 East - 772 – 4882 4891 (crisis counseling available), The Women's Center - 801 East - 772 – 4931.</p>-->
+  Medical Office - Room 307 North - 772 – 4800 (During business hours) Office of Student Services - 1119 East - 772 – 4882 4891 (crisis counseling available), The Women's Center - 801 East - 772 – 4931.</p>
 
 </div>
 
@@ -243,20 +249,19 @@ b. All Other Forms of Sexual Misconduct: Students are also encouraged to contact
 
 <div id="class1" class="row">
 <div class="col-md-12">
-<h3>Class 01 February 3rd</h3>
+<h3>Class 01 February 2nd</h3>
 <ul>
 <li><a href="week01.html" target="_blank">Course Introduction</a></li>
 <li>Create/Sign Into Accounts: <a href="http://fm.hunter.cuny.edu/resources/support/accessing-your-undergraduate-home-directory/" target="_blank">F&amp;M Account</a> and <a href="https://glitch.com/" target="_blank">Glitch</a> OR <a href="https://github.com/" target="_blank">GitHub</a></li>
 <li>Using: <a href="https://help.github.com/en/github/getting-started-with-github/create-a-repo" target="_blank">Create a repo</a>; <a href="https://pages.github.com/" target="_blank">Github Pages</a>; <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages" target="_blank">About github.io</a>; <a href="https://choosealicense.com/" target="_blank">Choosing a License</a></li>
-<li><a href="aframeDemo1.html" target="_blank">A-Frame Demo</a>, download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a></li>
-<li><a href="https://us02web.zoom.us/rec/share/XOdf5JszF6vd0at4ma2hzKwFp0wHL3ZQe81MWi8VUkSvWyHDIs_3kA8RoeUe-MBC.Yk0jMhqdlIUnec3m" target="_blank">Zoom Recording</a>, Passcode: UY77*0C*</li>
+<li><a href="aframe/aframeDemo1.html" target="_blank">A-Frame Demo</a>, download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a></li>
 </ul>
 
 <h4>Due by Next Class</h4>
 
 <strong>Reading:</strong>
   <ul type="square">
-    <li>Analytical: from <u>Race After Technology</u>, <a href="http://rmz.nyc/ima752/theory/raceAfterTech_Ch5.pdf" target="_blank">Chapter 5 Retooling Solidarity, Reimagining Justice</a></li>
+    <li>Analytical: from <u>Race After Technology</u>, <a href="http://rmz.nyc/ima752/theory/raceAfterTech_Ch5.pdf" target="_blank">Chapter 5 Retooling Solidarity, Reimagining Justice</a>; Read <a href="https://www.ajl.org/about" target="_blank">About</a> of The Algorithmic Justice League</li>
     <li>Technical: <a href="https://aframe.io/docs/" target="_blank">A-Frame Introduction</a>; VR Headsets &amp; WebVR Browsers; HTML &amp; Primitives; Entity-Component System, JavaScript, Events, DOM Apis</li>
     <li>Technical: <a href="https://aframe.io/docs/1.2.0/guides/building-a-basic-scene.html" target="_blank">Building a Basic Scene</a></li>
   </ul>
@@ -267,7 +272,7 @@ b. All Other Forms of Sexual Misconduct: Students are also encouraged to contact
     <li>Blog Entry: Reflections on <i>Chapter 5 Retooling Solidarity, Reimagining Justice</i></li>
     <li>Setup and Github or Glitch account and access your FM server</li>
     <li>Setup a course homepage where you will provide links to all your work, including the blog.</li>
-    <li>Due in two weeks: A-Frame Environment.  Decide on a social issue of interest i.e. Racial Justice, Living through COVID-19, 2020 Presidential Elections... and sketch out a few prompts to conduct an audio interview with a family member or friend.  Use the interview to inform a visual landscape.  Use the A-Frame and Photoshop templates to construct a landscape that includes audio and one or more 3D objects.</li>
+    <li>Due in two weeks: A-Frame Environment.  Decide on a social issue of interest i.e. Racial Justice, Living through COVID-19, 2020 Presidential Elections, upcoming midterm elections, climate change, economic disparity, online learning... and sketch out a few prompts to conduct an audio interview with a family member or friend.  Use the interview to inform a visual landscape.  Use the A-Frame and Photoshop templates to construct a landscape that includes audio and one or more 3D objects.</li>
   </ul>
 </div>
 </div>
@@ -276,19 +281,18 @@ b. All Other Forms of Sexual Misconduct: Students are also encouraged to contact
 
 <div id="class2" class="row">
 <div class="col-md-12">
-<h3>Class 02 - February 10th</h3>
+<h3>Class 02 - February 9th</h3>
 <ul>
   <li><a href="notesRaceAfterTech.html" target="_blank">Notes on <i>Chapter 5 Retooling Solidarity, Reimagining Justice</i></a></li>
   <li>A-Frame Demo: basic interaction, animated gif, sound; download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a></li>
   <li>A-Frame Image Tracking &amp; Geolocation</li>
   <li>Optional JS: <a href="http://rmz.nyc/ima752/lectureJS.html" target="_blank">JS Intro Lecture</a></li>
-  <li><a href="https://us02web.zoom.us/rec/share/ftN9nmvPb8FTtJJR6zFVslAPLObnZb5U3arIx78cibpMproOaZpOq9YCGGuWRUAo.vPXDp7Xwpyi_36D-" target="_blank">Zoom Recording</a>, Passcode: a.Ba5?e8</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
 <ul type="square">
   <li>Analytical: <br />
-    from <a href="http://rmz.nyc/books/hamletOnTheHolodeck.pdf" target="_blank"><u>Hamlet on the Holodeck</u></a>, Introduction: A Book Lover Longs For Cyberdrama
+    from <a href="http://rmz.nyc/books/hamletOnTheHolodeck.pdf" target="_blank"><u>Hamlet on the Holodeck</u></a>, Introduction: A Book Lover Longs For Cyberdrama &amp; Preface to 2016
 Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
     OPTIONAL: <a href="https://www.digitalartsonline.co.uk/features/illustration/18-tips-for-telling-story-through-artwork/" target="_blank">18 tips for telling a story through an artwork</a></li>
   <li>Technical: <br />
@@ -309,13 +313,12 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class3" class="row">
 <div class="col-md-12">
-<h3>Class 03 - February 17th</h3>
+<h3>Class 03 - February 16th</h3>
 <ul>
   <li>Review Project 1 - A-Frame Environment</li>
   <li><a href="week03.html" target="_blank">Reading Discussion &amp; Considering Augmented Reality</a></li>
   <li><a href="sparkAR_Intro.html" target="_blank">Introduction to Spark AR</a>; download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a></li>
   <li>Brainstorming and getting started on Project 2 using Spark AR</li>
-  <li><a href="https://us02web.zoom.us/rec/share/pQ00-zqdO6ws5ZKkm1kUE1JMhD-h-jMlBVSjrhH8gvP9I9Dy08Xks3_MM2EasEWc.OhiAjRtY84jtMyNH" target="_blank">Zoom Recording</a>, Passcode: ^4Ut2RFw</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
@@ -345,12 +348,10 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class4" class="row">
 <div class="col-md-12">
-<h3>Class 04 - February 24th</h3>
+<h3>Class 04 - February 23rd</h3>
 <ul>
   <li><a href="unity_Vuforia.html" target="_blank">Introduction to Unity</a></li>
-  <li><a href="http://www.evadavidova.com/" target="_blank">Eva Davidova</a></li>
-  <li><a href="https://us02web.zoom.us/rec/share/lx8G1yipjuvm4-e8vL-_DQwVRuXc9GDFrpNNSqjDIv6FrofMf086j7-TIB7324ZX.IcOseS_ucqF3ro1u" target="_blank">Zoom Recording</a>, Passcode: f0dQX8$0</li>
-  <li><a href="https://us02web.zoom.us/rec/share/5xnFaNCkLPLyn0DFpVZzsNFfgYP2SrTvtrnza7zG6cuJsJPKcXl50zrmKpu5JzyI.sn5edlGZLLpc82a6" target="_blank">Zoom Recording</a>, Passcode: +5V.AOHC</li>
+  <li>Extra Credit: attend <a href="http://www.evadavidova.com/" target="_blank">Eva Davidova</a> visiting lecture on Thursday 2/24</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
@@ -380,14 +381,13 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class5" class="row">
 <div class="col-md-12">
-<h3>Class 05 - March 3rd</h3>
+<h3>Class 05 - March 2nd</h3>
 <ul>
   <li>A-Frame &amp; Spark AR Quiz - log into <a href="https://bbhosted.cuny.edu/webapps/login/noportal" target="_blank">Blackboard</a> to take quiz</li>
   <li>Discuss Image-Based AR Project; examples: <a href="https://youtu.be/kVSGrM5uSNA?t=50" target="_blank">Jack Daniel's</a>; <a href="https://youtu.be/bTS5_LH0yK8?t=5" target="_blank">Terra Cota Warriors</a></li>
   <li>Download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a></li>
   <li>3D Characters &amp; Animations: Adobe <a href="https://www.mixamo.com/#/" target="_blank">mixamo</a></li>
   <li>Unity: <a href="https://docs.unity3d.com/Manual/AnimationSection.html" target="_blank">Animation System (Mecanim)</a> - Animation Timeline, Animation Controller</li>
-  <li><a href="https://us02web.zoom.us/rec/share/zH337G37FAxGnRgteeNIx9uxiGBzIKrgcB_71h4a8antaHmZPlprfAOUGe7CkXQ.vYFqcUA_4xg6M3nT" target="_blank">Zoom Recording</a>, Passcode: c$=cNdx3</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
@@ -411,14 +411,12 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class6" class="row">
 <div class="col-md-12">
-<h3>Class 06 - March 10th</h3>
+<h3>Class 06 - March 9th</h3>
 <ul>
   <li><a href="http://www.ziyangwu.com/index.html" target="_blank">Ziyang Wu</a>; article on Ziyang's work: <a href="https://www.itsnicethat.com/articles/ziyang-wu-a-woman-with-the-technology-digital-220520" target="_blank">Through post-internet projects, artist Ziyang Wu paints an important (and scary) picture of the future</a> by Ayla Angelos, It's Nice That</li>
   <li><a href="week06.html" target="_blank">Notes from Murray's Chapter 3 From Additive to Expressive Form</a></li>
   <li><a href="unity_Vuforia2.html" target="_blank">Updates and Build Vuforia Demo</a></li>
   <li>Work Day</li>
-  <li>Ziyang Wu's Presentation: <a href="https://us02web.zoom.us/rec/share/K9_kHpfd-3bSmeTyQt9kAMJ5vPvtWohEf8vBcyZ4mupXAcZ_nQy-YwoDJObXtLs.ZBfz6K8OnU00CN52" target="_blank">Zoom Recording</a>, Passcode: #9LlR?A=</li>
-  <li>Class Demo Portion of Class: <a href="https://us02web.zoom.us/rec/share/O2ZfMyVNl9mtgKkgJ4GoYTVPQJFxop5-wEvF0PKEIu-WzuJv1AspX1J6XibTrZXn.4bJrteNK6gXQH25g" target="_blank">Zoom Recording</a>, Passcode: 7r0=$Fv*</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
@@ -435,7 +433,6 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 </ul>
 <strong>Assignment:</strong>
 <ul>
-  <li>Register for <a href="https://us02web.zoom.us/webinar/register/WN_dCD89VukQlKUprIKp4erBw" target="_blank">Further Experiments in Art & Technology</a></li>
 <li>Blog Entry for Analytical Reading</li>
 <li>AR Story using Unity: Minimum 3 target images trigger AR content.  You may continue developing work around the issue or topic from the A-Frame project or select a new topic to create a series of images that will trigger Augutmented Reality content.  You may use the audio files and/or images from the A-Frame project.  Due March 24th</li>
 </ul>
@@ -445,13 +442,11 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class7" class="row">
 <div class="col-md-12">
-<h3>Class 07 - March 17th</h3>
+<h3>Class 07 - March 16th</h3>
 <ul>
   <li>Discuss reading</li>
   <li>Unity: Terrain tools, textures, Standard Asset FCP - <a href="skyboxTerrainDemo.html" target="_blank">demo notes</a>; Download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a></li>
   <li>Work on AR project</li>
-  <li>Noon <a href="https://www.newmuseum.org/calendar/view/1719/further-experiments-in-art-technology" target="_blank">Further Experiments in Art &amp; Technology</a></li>
-  <li><a href="https://us02web.zoom.us/rec/share/_xP5-Oc4zMD5sdjyl_yu5gx20SZi0SDb8xkbbi1ZrAZx-gw3spGBPL5gfw5SgSAX.HLuPHtl6hxsrZ1OS" target="_blank">Zoom Recording</a>, Passcode: LASC7#6=</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
@@ -476,13 +471,11 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class8" class="row">
 <div class="col-md-12">
-<h3>Class 08 - March 24th</h3>
+<h3>Class 08 - March 23rd</h3>
 <ul>
   <li>Review Unity/Vuforia AR Projects</li>
   <li><a href="week08.html" target="_blank">Project 4 - Unity Environment</a></li>
   <li>Unity: <a href="http://rmz.nyc/socialGames/csharpIntro.html" target="_blank">C# Introduction</a>; world building; Download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a> (skyboxTerrainDemo.unitypackage)</li>
-  <li><a href="https://us02web.zoom.us/rec/share/GGnemxtL1h37GWjynX4N2pvKT2fNZxjF3bsNVec5O05ejzf7Zi9Ms1Q8kY-SIUxF.dlQIEvXHwfyEWVMK" target="_blank">Zoom Recording</a>, Passcode: TS=2Md..</li>
-
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
@@ -511,17 +504,16 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class9" class="row">
 <div class="col-md-12">
-<h3>Class 09 - April 7th</h3>
+<h3>Class 09 - March 30th</h3>
 <ul>
   <li>Quiz 2 - Unity basic concepts</li>
   <li>Unity Environment Building: <a href="week09.html" target="_blank">Presentation</a>; Download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a> (environmentDemo.unitypackage)</li>
   <li>Unity: <a href="https://assetstore.unity.com/packages/tools/game-toolkits/fungus-34184" target="_blank">Fungus</a></li>
-  <li><a href="https://us02web.zoom.us/rec/share/__OK2R_G3Y9F-VWoT96lA7OXsTaleHJ710YKNfMkIAA2wovUddiBnV8Cnyb2MfbI.MIGGNNUDbUMoJLas" target="_blank">Zoom Recording</a>, Passcode: v08XN0y@</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
 <ul type="square">
-  <li>Analytical: from <a href="http://rmz.nyc/books/hamletOnTheHolodeck.pdf" target="_blank"><u>Hamlet on the Holodeck</u></a>, 7. The Cyberbard and the Multiform Plot, 2016 Update</li>
+  <li>Analytical: </li>
   <li>Technical: from <u>Unity in Action</u>, Chapter 7</li>
   <strong>-- OR --</strong><br />
   <li>Create with Code<br />
@@ -544,16 +536,15 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class10" class="row">
 <div class="col-md-12">
-<h3>Class 10 - April 14th</h3>
+<h3>Class 10 - April 6th</h3>
 <ul>
   <li>Notes on <a href="proppCampbell.html" target="_blank">The Cyberbard and the Multiform Plot</a></li>
   <li>Unity Environment Building, reticle, NavMesh and adding characters: <a href="week10.html" target="_blank">Presentation</a>; Download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a> (navMeshDemo.unitypackage)</li>
-  <li><a href="https://us02web.zoom.us/rec/share/SQQv_uLpE4rS_rvLI0oCYnPIOVDgI7wmxEIzlvMsRWA5f_CYsKLhq8rZQdawAY1A.GFxytmAeFOweo3Jo" target="_blank">Zoom Recording</a>, Passcode: 2h*UYGyI</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
 <ul type="square">
-  <li>Analytical: from <a href="http://rmz.nyc/books/hamletOnTheHolodeck.pdf" target="_blank"><u>Hamlet on the Holodeck</u></a>, 8. Eliza’s Daughters, 2016 Update</li>
+  <li>Analytical: </li>
   <li>Technical: from <u>Unity in Action</u>, Chapter 8</li>
   <strong>-- OR --</strong><br />
   <li>Create with Code<br />
@@ -578,17 +569,16 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class11" class="row">
 <div class="col-md-12">
-<h3>Class 11 - April 21st</h3>
+<h3>Class 11 - April 13th</h3>
 <ul>
   <li>Notes on <a href="elizasDaughter.html" target="_blank">ELIZA's Daughter</a></li>
   <li>Review Unity Environments</li>
   <li>Unity Basic Interaction: Physical Materials, PickUps, Audio and Video <a href="week11.html" target="_blank">Presentation</a>; Download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a> (basicInteraction.unitypackage)</li>
-  <li><a href="https://us02web.zoom.us/rec/share/N8YXJPnMnZgt9j_fOTiywv7OcGpCYOdXfNpzq_tLpu6QrGvYAAF2fgS6vRjbWAto.zKLf6sMESQF8bmr5" target="_blank">Zoom Recording</a>, Passcode: uwyH5I=5</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
 <ul type="square">
-  <li>Analytical: from <a href="http://rmz.nyc/books/hamletOnTheHolodeck.pdf" target="_blank"><u>Hamlet on the Holodeck</u></a>, 9. Digital TV and the Emerging Formats of Cyberdrama, 2016 Update</li>
+  <li>Analytical: </li>
   <li>Technical: from <u>Unity in Action</u>, Chapter 9</li>
   <strong>-- OR --</strong><br />
   <li>Create with Code<br />
@@ -611,16 +601,15 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class12" class="row">
 <div class="col-md-12">
-<h3>Class 12 - April 28th</h3>
+<h3>Class 12 - April 27th</h3>
 <ul>
 <li>Unity: Waypoints, NPC Controller, Unity Audio Mixer</li>
 <li>Unity Basic Interaction: Physical Materials, PickUps, Audio and Video <a href="week12.html" target="_blank">Notes</a>; Download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a> (npcInteractionDemo.unitypackage)</li>
-<li><a href="https://us02web.zoom.us/rec/share/FXgPbfpirw4XDOuG-S2ueZO-Y7CbAQwz465US9n-UbpmmvENr94ANky3WGi5EHyn.NI-x_PcQ4paeIJDi" target="_blank">Zoom Recording</a>, Passcode: !QZ4GM1J</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
 <ul type="square">
-  <li>Analytical: from <a href="http://rmz.nyc/books/hamletOnTheHolodeck.pdf" target="_blank"><u>Hamlet on the Holodeck</u></a>, 10. Hamlet on the Holodeck?, 2016 Update</li>
+  <li>Analytical: </li>
   <li>Technical: from <u>Unity in Action</u>, Chapter 10</li>
   <strong>-- OR --</strong><br />
   <li>Create with Code<br />
@@ -643,13 +632,12 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class13" class="row">
 <div class="col-md-12">
-<h3>Class 13 - May 5th</h3>
+<h3>Class 13 - May 4th</h3>
 <ul>
   <li>Notes on <a href="hamletOnHolodeckCH10.html" target="_blank">Ch10 Hamlet on Holodeck?</a></li>
   <li>Group Brainstorming</li>
   <li>Unity: AR Foundation &amp; Oculus; <a href="week13.html" target="_blank">Notes</a></li>
   <li>Quiz 3 - Unity advanced concepts</li>
-  <li><a href="https://us02web.zoom.us/rec/share/QHYFVnqArPK3EETFSMk7mqFaj0snJkjDhkDG9EIXzlmnz3Q_lWoPPAGDQqD17CS-.g-xgWYSZvafswFgd" target="_blank">Zoom Recording</a>, Passcode: sQ9MF*$f</li>
 </ul>
 <h4>Due by Next Class</h4>
 <strong>Reading:</strong>
@@ -672,7 +660,7 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class14" class="row">
 <div class="col-md-12">
-<h3>Class 14 - May 12th</h3>
+<h3>Class 14 - May 11th</h3>
 <ul>
 <li>Work Day; individual meetings</li>
 </ul>
@@ -700,7 +688,7 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 
 <div id="class14" class="row">
 <div class="col-md-12">
-<h3>Final Project - Interactive Experience due May 19th</h3>
+<h3>Final Project - Interactive Experience Critique May 18th</h3>
 </div>
 </div>
 <hr />
@@ -708,11 +696,8 @@ Preface to the 2016 eBook: The Future of Narrative, Revisited<br />
 </div> <!-- /container -->
 </main>
 
-
 <!-- Bootstrap core JavaScript -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
   </body>
 </html>
