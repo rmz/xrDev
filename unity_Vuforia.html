@@ -10,6 +10,7 @@
     <meta name="author" content="Ricardo Miranda Zuniga">
 
     <link href="slideshow.css" rel="stylesheet" />
+    <title>Using Vuforia AR Engine with Unity</title>
 
 </head>
 
@@ -21,12 +22,12 @@
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <p>Tools we'll be using:</p>
       <ul>
-        <li><a href="https://unity.com/releases/2019-lts" target="_blank">Unity 2019.4 LTS</a>; <a href="https://unity3d.com/unity/qa/lts-releases" target="_blank">about Long Term Support (LTS)</a>; Latest version 2020.2.5<br />
+        <li><a href="https://unity.com/releases/release-overview" target="_blank">Unity 2020 LTS</a>; <a href="https://unity3d.com/unity/qa/lts-releases" target="_blank">about Long Term Support (LTS)</a><br />
         &nbsp;&nbsp;<a href="https://unity.com/" target="_blank">Create Unity Account</a><br />
         &nbsp;&nbsp;<a href="https://learn.unity.com/" target="_blank">Unity Learn</a></li>
         <li><a href="https://developer.vuforia.com/" target="_blank">Vuforia Developer Portal</a><br />
-        &nbsp;&nbsp;<a href="https://library.vuforia.com/articles/Training/getting-started-with-vuforia-in-unity.html" target="_blank">Vuforia Engine in Unity</a></li>
-        <li>Note on alternatives: <a href="https://unity.com/products/unity-mars" target="_blank">Unity MARS</a>; <a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html" target="_blank">Unity AR Foundation</a></li>
+        &nbsp;&nbsp;<a href="https://library.vuforia.com/" target="_blank">Vuforia Engine in Unity</a> Getting Started...</li>
+        <li>Note on alternatives: <a href="https://unity.com/products/unity-mars" target="_blank">Unity MARS</a>($$$); <a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html" target="_blank">Unity AR Foundation</a></li>
         <li>Download <a href="http://rmz.nyc/xrDev" target="_blank">demo files</a></li>
       </ul>
     </section>
@@ -35,15 +36,15 @@
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <ul>
         <li>Download Unity Hub.  Similar to Adobe Creative Cloud, Unity Hub is used as a portal to manage everything related to Unity - Projects, Learn, Community and your installations of Unity (you may have multiple versions of Unity installed).</li>
-        <li>Use Unity Hub to install the latest version of Unity 2019.4, I am committing to Unity 2019.4.20f1 for the length of the semester.  Depending on what tutorials you elect to do for this class, you may need to download other versions.
+        <li>Use Unity Hub to install the latest version of Unity 2020 LTS.  Depending on what tutorials you elect to do for this class, you may need to download other versions.
           <ol>
-            <li>Using the book: I have updated the chapter projects from <a href="http://rmz.nyc/books/unityInAction_2ndEdition.pdf" target="_blank"><u>Unity in Action</u></a><br />
-            &nbsp;&nbsp;<a href="http://rmz.nyc/xrDev" target="_blank">Code for Unity in Action</a>; <a href="https://fmundergrad.hunter.cuny.edu/~mirandar/xrDev/" target="_blank">back up drive</a> (updated to 2019.4.20f1)</li>
-            <li>Using video tutorials: If you prefer to learn through video tutorials, the Unity Learn <a href="https://learn.unity.com/course/create-with-code" target="_blank">Create with Code</a> series uses Unity 2018.4.</li>
-            <li>Jumping into VR:  For advanced students (those comfortable with Unity), starting March 24th, the <a href="https://learn.unity.com/project/vr-beginner-the-escape-room" target="_blank">VR Beginner: The Escape Room</a> is assigned and it uses Unity 2020.2</li>
+            <li>Using the book: I have updated the chapter projects from <a href="http://rmz.nyc/books/unityInAction_ThirdEdition.pdf" target="_blank"><u>Unity in Action Third Edition</u></a><br />
+            &nbsp;&nbsp;<a href="http://rmz.nyc/xrDev" target="_blank">Code for Unity in Action</a>; or from the publisher <a href="https://www.manning.com/books/unity-in-action-third-edition" target="_blank">Manning</a></li>
+            <li>Using video tutorials: If you prefer to learn through video tutorials, the Unity Learn <a href="https://learn.unity.com/course/create-with-code" target="_blank">Create with Code</a>.</li>
+            <li>Jumping into VR:  For advanced students (those comfortable with Unity), starting March 30th, the <a href="https://learn.unity.com/project/vr-beginner-the-escape-room" target="_blank">VR Beginner: The Escape Room</a> is assigned and it uses Unity 2020.2</li>
           </ol>
         </li>
-        <li>Open Unity Hub, Add a new project, version Unity 2019.4.2.20f1, first generate a Universal Render Pipeline template to view a Scene and Asset folders.  Then close and create an empty 3D template project as we'll be importing the Vuforia Engine and there will be less conflict and library rebuilding. </li>
+        <li>Open Unity Hub, Add a New Project, version Unity 2020.3 LTS (or latest installed version) - 3D Core template.  If All templates are selected, there are several templates available: HDRP, URP, VR, AR, Third Person, First Person, 3D Mobile, 2D Mobile and learning projects.  HDRP (only for desktop - Mac and Windows) and URP (desktop, mobile, WebGL) contain sample scenes that demonstrate use of lights and other assets.  Although I generally recommend URP, create an empty 3D template project as we'll be importing the Vuforia Engine and there will be less conflict and library rebuilding than using URP. </li>
       </ul>
     </section>
 
@@ -51,19 +52,19 @@
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <ul>
         <li>With the 3D template project open, go to Window > Layouts > Default, so that we are all navigating the same panel layout.  (All these panels are modular and may be moved around.)</li>
-        <li>Go to Window > Package Manager - Below Package Manager title tab, you should see Unity Registry tab and Advanced tab.  (In Unity’s Package Manager window, all packages registered on Unity’s registry appear in the list view when you select the Unity Registry context.  They may take a moment to load.)</li>
-        <li>Scroll to Vuforia Engine AR and check for 9.7.  If Vuforia package is not available or an older version than 9.7 is available, close the Package Manager and navigate to the Asset Store.  If the Asset Store is not open in default center panel, go to Window > Asset Store.</li>
-        <li>In the Asset Store tab (in center, adjacent to Scene and Game).  In the search field type Vuforia Engine and Download latest version - 9.7.5.  Agree to terms as this is a third party application.  Once downloaded Import it into your project.  You may see warnings as the template we are using already has a scene and scripts.  Click ok to the warnings and then an Import Unity Package window will appear, click Import and then Update if necessary.</li>
+        <li>Go to Window > Package Manager - Below Package Manager title tab, you should see Unity Registry tab.  (In Unity’s Package Manager window, all packages registered on Unity’s registry appear in the list view when you select the Unity Registry context.  They may take a moment to load.)</li>
+        <li>Scroll to Vuforia Engine AR and check for 10.5.  If Vuforia package is not available or an older version than 10.5 is available, close the Package Manager and navigate to the Asset Store - Window > Asset Store that will open in a browser.  You will need a Unity account.)</li>
+        <li>In the Asset Store use the search field and type Vuforia Engine and Download latest version by clicking Open in Unity.  The Unity Package Manager will open and click the Import button at bottom right or Update if already downloaded.  Agree to terms as this is a third party application.  Once downloaded Import it into your project.  You may see warnings as the template we are using already has a scene and scripts.  Click ok to the warnings and then an Import Unity Package window will appear, click Import and then Update if necessary.  Accept the user agreement and close the Package Manager.</li>
       </ul>
     </section>
 
     <section class="fade">
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <ul>
-        <li>In the Scene folder, create a new scene.  You may do so by right-clicking in Assets panel or from the top menu Assets > Create > Scene.</li>
+        <li>In the Scenes folder, create a new scene.  You may do so by right-clicking in Assets panel or from the top menu Assets > Create > Scene.</li>
         <li>Name it VuforiaDemo (no blank spaces)</li>
         <li>Delete Main Camera (right-click Camera or control-click)</li>
-        <li>In Hierarchy Create > Vuforia Engine > AR Camera</li>
+        <li>In Hierarchy Create (+) > Vuforia Engine > AR Camera</li>
         <li>Vuforia license key and database are used in the Vuforia Engine configuration.</li>
         <li>The default way Vuforia works is with Image Recognition. Image Recognition, also called Tracker Recognition or Image Tracking, is the process by which the camera detects a predetermined image and knows what to do with it, such as rendering some content on top of it.</li>
       </ul>
@@ -72,15 +73,15 @@
     <section class="fade">
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <ul>
-        <li><a href="https://developer.vuforia.com/" target="_blank">Create Vuforia Account</a> (the biggest forthcoming competitor is Unity MARS)</li>
+        <li><a href="https://developer.vuforia.com/" target="_blank">Create Vuforia Account</a> (the biggest competitor is Unity MARS that at this time allows for one month free trial and then $600 license.)</li>
         <li>License Manager for project Key
           <ol>
-            <li>License Manager > Get Development Key.  Use the name of your project, in this case VuforiaDemo</li>
+            <li>License Manager > Get Basic.  Use the name of your project, in this case VuforiaDemo</li>
             <li>Click into the new license key, when we are ready to return to Unity, we'll click the license key to copy it to your computer's clipboard and then paste into Unity, but first add target images.  You may use the same key for multiple databases.</li>
             <li>Click Target Manager to create a database of images to track.  Create Database: name it and choose Type: Device as it is free for development and testing.</li>
-            <li>Once generated, click into database and Add Target.  Ideally the image receives four stars as a targeting image.  <a href="https://library.vuforia.com/features/images/image-targets/best-practices-for-designing-and-developing-image-based-targets.html" target="_blank">Developing Image-Based Targets</a></li>
+            <li>Once generated, click into database and Add Target.  Ideally the image receives four stars as a targeting image.  <a href="https://library.vuforia.com/objects/best-practices-designing-and-developing-image-based-targets" target="_blank">Best Practices for Designing and Developing Image-Based Targets</a> (rich in detail, good contrast, no patterns, .png or .jpg and less than 2MB).</li>
             <li>The demo folder has two target images - arDemoPrint1.jpg and arDemoPrint2.jpg, add them one at a time.</li>
-            <li>Width: 0.2413<br />
+            <li>Width: 0.2413 (Vuforia uses meters)<br />
               Unity (same as Vuforia) measures everything in meters. The demo images are 9.5"x8" which is equal to 24.13 cm x 20.32 cm, so in meters the image is: 0.2413, 0.2032282</li>
           </ol>
         </li>
@@ -92,11 +93,11 @@
     <section class="fade">
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <ul>
-        <li>In Hierarchy, select ARCamera and in its Inspector click Open Vuforia Engine configuration.
+        <li>In Hierarchy, select ARCamera and in its Inspector click Open Vuforia Engine configuration (toward the bottom, under Vuforia Behaviour script).
         </li>
         <li>The Inspector will now show the properties for the VuforiaConfiguration.  In the field next to App License Key, paste your key from Vuforia developer account.  You can also click Add License button which will open the Vuforia developer portal in your default browser to select and copy the key.</li>
-        <li>In the inspector find Databases and click Add Database and your default browser will open to developer.vuforia.com, log in if necessary, go to Target Manager, select and download the appropriate database for Unity.</li>
-        <li>Once downloaded open it and Import it into your Unity Project.  When opened, it should automatically open the Import Package window, click import, or go to Assets > Import Package > Custom Assets.  Once imported, the Database will be in the VuforiaConfiguration Inspector window under Databases.  (The VuforiaConfiguration is located inside the Assets > Resources folder)</li>
+        <li>In the inspector find Databases and click Add Database and your default browser will open to developer.vuforia.com, log in if necessary, go to Target Manager, select and download the appropriate database for Unity.  Select Unity Editor for the development platform.</li>
+        <li>Once downloaded open it and Import it into your Unity Project.  When opened, it should automatically open the Import Package window, click import, or go to Assets > Import Package > Custom Assets.  Once imported, the Database will be in the Vuforia Configuration Inspector window under Databases.  (The VuforiaConfiguration is located inside the Assets > Resources folder.  You can find your processed images in Assets > Editor > Vuforia > ImageTargetTextures and the name of your database.)</li>
       </ul>
     </section>
 
@@ -104,7 +105,7 @@
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <p>Once the key is pasted and the database installed...</p>
       <ul>
-        <li>In the Hierarchy Create > Vuforia Engine > Image</li>
+        <li>In the Hierarchy Create > Vuforia Engine > ImageTarget</li>
         <li>The ImageTarget will be associated with the imported database.</li>
         <li>In the Inspector > Image Target Bahaviour > Image - select the Image Target.</li>
         <li>Check the appropriate size under Advanced<br />
@@ -117,11 +118,11 @@
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <p>To present a 2D image in the app:</p>
       <ul>
-        <li>With the ImageTarget selected, create a 3D Plane. (The 3D Plane will be a child to the ImageTarget.)</li>
-        <li>Resize it to .02, 02, 02 so that its scale is in relation to target image. (Feel free to play with the size.)</li>
+        <li>With the ImageTarget selected, create a 3D Plane.  Right click or control click ImageTarget and select 3D Object > Plane (The 3D Plane will be a child to the ImageTarget and should be indented under ImageTarget.)</li>
+        <li>Resize it to .02, .02, .02 so that its scale is in relation to target image. (Feel free to play with the size.)</li>
         <li>Try moving the plane on the x,y,z coordinates using the arrows or Inspector</li>
-        <li>In the Assets panel, create a new Folder, name it Textures.  Drag and drop the 2D image png file from the demo folder into the Textures folder.  (2D images may be .jpg or .png)</li>
-        <li>In the newly imported image Inspector, change the Texture Type to Sprite (2D and UI)</li>
+        <li>In the Assets panel, create a new Folder, name it Textures.  Drag and drop the 2D image png file from the demo folder into the Textures folder (it's titled iroquoisNation.png).  2D images may be .jpg or .png.</li>
+        <li>Select the newly imported image.  In the newly imported image Inspector, change the Texture Type to Sprite (2D and UI)</li>
         <li>In Assets, create a new folder and name it Materials</li>
         <li>In the Materials folder, create a new material.  Name it Vuforia01</li>
         <li>In the new material's Inspector, change the Rendering Mode to Transparent</li>
@@ -138,7 +139,7 @@
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <p>Trying adding other elements</p>
       <ul>
-        <li>3D Trump example - position: 0,0.045,0; rotation: 0,0,180; scale: 0.1,0.1,0.1</li>
+        <!--<li>3D Trump example - position: 0,0.045,0; rotation: 0,0,180; scale: 0.1,0.1,0.1</li>-->
         <li>3D Text - position .0681, .045, -.0684, rotation: 90,0,0, scale: .02,.02,.02, font size 12pt, centered</li>
       </ul>
     </section>
@@ -150,7 +151,8 @@
         <li>Requires Android SDK or iOS (best to download via Hub with Unity version)</li>
         <li>In File > Build Settings > Platform > Install iOS or Android, if not already installed</li>
         <li>Switch Platform will recompile the project for Android.</li>
-        <li>However, for this assignment, please export your project as a package: Assets > Export Package.  Post the package to your server space or GitHub repo and link to it from your projects page.  Due March 17th.</li>
+        <li>However, for this assignment, please export your project as a package: Assets > Export Package.  Post the package to your server space or GitHub repo and link to it from your projects page.  Due March 16th.</li>
+        <li>Next week will continue adding to this project.  For now brianstorm an augmented reality story book.</li>
       </ul>
     </section>
 
