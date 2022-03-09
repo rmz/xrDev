@@ -11,7 +11,9 @@
     <title>Using Vuforia AR Engine with Unity</title>
 
     <link href="slideshow.css" rel="stylesheet" />
-
+    <style>
+      body {margin: 15px;}
+    </style>
 </head>
 
 <body>
@@ -27,7 +29,7 @@ In the Hierarchy, ImageTarget does not need to be parented to the ARCamera.  As 
 You will notice that the AR image sticks around even after the target image is gone.  Select the ImageTarget and in it's Inspector, under the Default Observer Event Handler set the Consider target as visible if its status is Tracked (not Tracked or Extended Tracked).
 </p>
 <p>
-Create a second ImageTarget: <br />
+<strong>Create a second ImageTarget:</strong> <br />
 In the Hierarchy + - Create > Vuforia > ImageTarget<br />
 In its Inspector rename it to correspond with the image and in the Image Target Behaviour select the Image.
 </p>
@@ -35,7 +37,7 @@ In its Inspector rename it to correspond with the image and in the Image Target 
 As the game environment becomes populated, you can hide any game object by clicking the eye icon in the Hierarchy.  This will hide it, but will still appear when testing.  If you wish to entirely turn it off and not see when testing, go to its Inspector and turn it off by clicking the check next to the name at the top of the Inspector.
 </p>
 <p>
-Adding a 3D Character<br />
+<strong>Adding a 3D Character</strong><br />
 Last week's download folder had a low-poly trump character, add it to the Assets folder by dragging the Characters folder into the Asset folder.
 </p>
 <p>
@@ -48,7 +50,7 @@ Use the Move tool to center and place above the image.
 In the Hierarchy select the corresponding ImageTrack and in the Inspector, under the Default Observer Event Handler set the Consider target as visible if its status is Tracked (not default Tracked or Extended Tracked) to have Trump go away when the target image isn't available.
 </p>
 <p>
-Creating a Sprite Animation<br />
+<strong>Creating a Sprite Animation</strong><br />
 In the download folder for today, there's a Sprites folder with several transparent PNGs that have been exported from Illustrator.  Drag the Sprites folder into the Assets panel.
 </p>
 <p>
@@ -122,7 +124,7 @@ In the Animations folder two things were created:<br />
 Animation Controller maps how animation relate to one another.  The icon represents different animations linking to one another.  The Animation is the triangle icon.  Double click the triangle and it will take you to the corresponding animation timeline.  Double click the animation controller and it will open the Animator panel.  Click them once and you can see its properties in the Inspector.  An animation can be stopped by turning off Loop Time in its inspector.
 </p>
 <p>
-Creating 3D Animations<br />
+<strong>Creating 3D Animations</strong><br />
 Use Mixamo.com and the low-poly trump to animate.<br />
 Go to Mixamo.com, use your Adobe login and import the trump character, by clicking UPLOAD CHARACTER and drag into the window the .FBX file.  Use place markers to set the joints for rigging.  If it looks good, click NEXT and add animations.  Unity also has a 3D rigging package, but Mixamo makes it very easy for anthropomorphic characters.  Download the rigged T-pose trump as FBX Binary and T-pose, rename it trumpRigged and add it to the Characters folder in Unity.
 </p>
@@ -154,7 +156,7 @@ Add each animation, one at a time and make transitions.  Make transitions by con
 Back in the scene Hierarchy, create a UI > Button.  This will add a 2D Canvas that overlays onto the game space.  The Canvas represents the entire viewport of the user device.  The Button is part of the canvas and it's made up of a default square with a black outline and white fill called the UISprite.  You may create your own buttons in say Illustrator or Photoshop and import them into the project and set it as the Source Image in place of the UISprite.  In the Button there is a Text game object, when selected edit the text.  You may also resize and reposition the Button.
 </p>
 <p>
-Adding Interactivity
+<strong>Adding Interactivity</strong>
 Buttons by default have an On Click event.  Select the button and in its Inspector scroll down to On Click. Click the plus sign.  Drag the trumpRigged (the game object that has the Animation Controller) to None (Object) field and from the No Function dropdown select Animator > Play (string) and type in the name of the target animation in the Animation Controller.
 </p>
 <p>
