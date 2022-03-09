@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hunter College Media Studies">
+    <meta name="author" content="Ricardo Miranda Zuniga">
+    <title>Unity AR Foundation Intro</title>
+
+    <link href="slideshow.css" rel="stylesheet" />
+
+  </head>
+
+<body>
+
+  <div class="slideshow-container">
+
+    <section class="fade">
+      <p>AR Foundation is maintained by Unity and is part of its package registry.  AR Foundation enables the construction of Augmented Reality applications targeting both iOS and Android devices.  This means you can use AR Foundation to build an AR Unity application and deploy it to either an iOS or Android device without changing any of the Scene's scripts or components.
+        <br />- from <a href="https://learn.unity.com/tutorial/setting-up-ar-foundation" target="_blank">Setting Up AR Foundation</a>
+      </p>Unfortunately, for the iOS build, there's no way to test from the editor unless one purchases <a href="https://assetstore.unity.com/packages/tools/utilities/ar-foundation-editor-remote-168773" target="_blank">AR Foundation Editor Remote</a> for $80.  And my Android is too old to test or run the AR app - the Google Play Services for AR as I get the message: "Your device isn't compatible with this version."</p>
+    </section>
+
+    <section class="fade">
+      <p>AR Foundation may be employed for vertical and horizontal plane detection, 3D object tracking, face tracking, image tracking as in this brief example.  The three packages that will be imported into your project are <br />
+        &nbsp; &nbsp; AR Foundation
+        <br />
+        &nbsp; &nbsp; ARCore for Android
+        <br />
+        &nbsp; &nbsp; ARKit for iOS.</p>
+      <p>Create a new 3D Core project, be organized with your project files when deciding where to save it.  I keep all my Unity projects in one "unityProjects" folder in my Documents folder.</p>
+      <p>Window > Package Manager - Use the Unity Registry to find and install AR Foundation, ARCore Plugin, ARKit XR Plugin and close window.</p>
+    </section>
+
+    <section class="fade">
+      <p>From the top menu go to Edit > Project Settings > XR Plug-in Management
+        <br />&nbsp; &nbsp; For iOS turn on ARKit
+        <br />&nbsp; &nbsp; For Android turn on ARCore
+        <br />and close window </p>
+    </section>
+
+    <section class="fade">
+      <p>In the <strong>Hierarchy</strong>:<br />
+        1. Delete the Main Camera as an AR specific camera will be used.
+        <br /><br />
+        2. Add AR Session<br />
+        The AR Session controls the lifecycle of an AR experience, enabling or disabling AR on the target platform.  The ARSession can be on any GameObject.  If the Scene doesn't contain an ARSession, the application will not be able to track features in its environment.
+        <br /><br />
+        3. Add AR Session Origin<br />
+        This enables virtual object interaction and manipulation with these transformed features.
+        <br /><br />
+        4. In AR Session, select AR Camera and in its Inspector, change the Tag to MainCamera.
+        <br /><br />
+        5. Now select AR Sessions Origin from the Hierarchy and in its inspector click Add Component - search Image and select AR Tracked Image Manager.<br />
+        The AR Tracked Image Manager has:<br />
+        &nbsp; &nbsp; Serialized Library - these are the images the app will be looking to detect.<br />
+        &nbsp; &nbsp; Max Number of Moving Images - depends on how powerful the device is.<br />
+        &nbsp; &nbsp; Tracked Image Prefab - the virtual object that will be instantiated when an image is detected.  A prefab is any object that will be repeated in a project or needs to be instantiated by code.</p>
+    </section>
+
+    <section class="fade">
+      <p>In the <strong>Assets</strong> folder/window<br /><br />
+        Create a new folder and call it Prefabs.
+        <br /><br />
+        Click into the Prefabs folder and right click to open menu of Assets to be generated.  Go to Create > XR > Reference Image Library<br />
+        When the Reference Image Library is selected, the Inspector will show an Add Images folder.
+        <br /><br />
+        Create a Textures folder and add images to track - .jpg or .png files.
+        <br /><br />
+        In the Assets folder, create a new folder and name it Textures.  Drag and drop from your computer the .jpg or .png files that will be the targets.
+        <br /><br />
+        Select the Reference Image Library and Add Image.  Add your images and turn on Specify Size.  The library will recognize the pixel dimensions of the image, but not the game environment or physical size, so set your size, try .02 for the X and the Y will change proportionally.  (The size may be determined by the meter scale of the tracked image.)
+      </p>
+    </section>
+
+    <section class="fade">
+      <p>
+        In the <strong>Hierarchy</strong><br /><br />
+        Select AR Session Origin and from the Assets > Prefab folder drag the Reference Image Library into the Serialized Library or click the target in the field and select it.
+        <br /><br />
+        In the Hierarchy, create a 3D square or sphere some game object to test the image recognition.  Resize it to correspond to the image so .02 for XYZ. Make it into a prefab.<br /><br />
+        A prefab is intended for game objects that will be repeated in a project and for any game objects that are instantiated by code.  For example, a pedestrian in an urban game setting that will show up multiple times and populate the game space via code must be prefabs.  Prefabs are generated when game objects are dragged from the Hierarchy into the Assets folder or better into a Prefabs folder in the Assets folder merely to keep your files organized.  Once the game object is saved as a prefab in the Assets folder, it can be deleted from the Hierarchy.
+      </p>
+    </section>
+
+    <section class="fade">
+      <p>In the <strong>Build Settings</strong>, target appropriate device:<br /><br />
+        File > Build Settings and select the target device, i.e. Android or iOS and click Switch Platform.  (Requires a minute or more, depending on your computer to Import Assets and Build Scripts.)</p>
+    </section>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+<script src="slideshow.js"></script>
+  </body>
+</html>
