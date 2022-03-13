@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hunter College Media Studies">
+    <meta name="author" content="Ricardo Miranda Zuniga">
+    <title>Using Vuforia AR Engine with Unity</title>
+
+    <link href="slideshow.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="slideshow-container">
+
+    <section class="fade">
+      <h2>Other Unity notes in general</h2>
+      <p>Concerning the project's Assets:<br />
+        Although it's necessary to clean up your hierarchy, you do not have to do the same with your Project Assets.  The only game objects that end up in the final build are what are in the hierarchy.  So you can have a bloated set of assets, but if they are not used in the hierarchy they are not part of the final build.  I do however, strongly recommend that you keep a well organized Asset folder.</p>
+    </section>
+
+    <section class="fade">
+      <h2>How to submit your Unity exercises and projects:</h2>
+      <p>There are several ways to submit your work: 1. upload to your server an exported packag; 2. zip your Unity project and uplaod to your server; 3. build your project as WebGL, create an <a href="https://itch.io/" target="_blank">itch.io</a> account if you don't have one and upload the build.</p>
+    </section>
+
+    <section class="fade">
+      <p>Build your project for Android</p>
+      <ol>
+        <li>In your Assets > Scene folder, select your project scene (in the example "VuforiaDemo") and then from the top menu go to Assets > Export Package.  Post your exported package to your server and link to it from your course homepage.</li>
+        <li>Build the project and post it to your server for download.  For Android, it is an <a href="https://docs.unity3d.com/Manual/android-BuildProcess.html" target="_blank">APK</a>
+          <ol>
+            <li>When you are viewing the Scene that you want build go to the top menu > File > Build Settings</li>
+            <li>In the Build Settings window, make sure that only the Scene that you want built is in the Scenes In Build</li>
+            <li>Select your Platform, change platform if necessary (this may take a while).  Only the platforms that you downloaded with this version of Unity will be available.</li>
+            <li>As this project uses Vuforia, an AR engine, the platforms would have to be either Android or iOS.  Notes for Android
+              <ul>
+                <li>Texture Compression Dont' override - ETC</li>
+                <li>ETC2 fallback 32-bit</li>
+                <li>Run Device - a USB connected device should show up here.</li>
+                <li>Compression Method<br />
+                  None - no or default platform compression.<br />
+                  LZ4 - fast compression suitable for Development Builds.<br />
+                  LZ4HC - higher compression rate variance of LZ4, causes longer build times. Works best for Release Builds.</li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+
+    <section class="fade">
+      <h2>Build for WebGL</h2>
+      <p>As I don't have a recent Android phone and I don't pay Apple an annual $100 developer fee , I decided to view a working version of this project on the web.  However, Vuforia isn't available for the web, so I could only build the SampleScene that I used to assemble the Animated History and Animated Trump game objects before copying and pasting them into the VuforiaDemo scene.</p>
+      <p>To do so, I duplicated the project in my Finder.  I cleaned out all Vufofia content - the Vuforia Scene and all Vuforia folders.  I also had to delete the manifest.json and packages-lock.json from my Packages folder through the Finder.  (So I cleared out the manifest that still pointed to the Vuforia engine.). Example using SampleScene where I tested game objects that I copied into my Vuforia scene.  Select and go to SampleScene.  Open Build Settings, add the open scene.  Switch Platform to WebGL.  Build and Run.  I do not save my built projects into the project folder.  I maintain a separate folder in my Documents for completed or test builds.</p>
+      <p>I can then upload the webgl build to my server or a platform like <a href="https://itch.io/" target="_blank">itch.io</a></p>
+    </section>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+<script src="slideshow.js"></script>
+  </body>
+</html>
