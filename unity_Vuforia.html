@@ -19,6 +19,7 @@
   <div class="slideshow-container">
 
     <section class="fade">
+      Screen recording: <a href="https://youtu.be/KpSxW9jcMDQ" target="_blank">Unity and Vuforia Demo 1</a>
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <p>Tools we'll be using:</p>
       <ul>
@@ -52,6 +53,7 @@
       <h1>Intro to Unity for Image Tracking Using Vuforia</h1>
       <ul>
         <li>With the 3D template project open, go to Window > Layouts > Default, so that we are all navigating the same panel layout.  (All these panels are modular and may be moved around.)</li>
+        <li>Go to File > Build Settings and select iOS or Android and click Switch Platform</li>
         <li>Go to Window > Package Manager - Below Package Manager title tab, you should see Unity Registry tab.  (In Unity’s Package Manager window, all packages registered on Unity’s registry appear in the list view when you select the Unity Registry context.  They may take a moment to load.)</li>
         <li>Scroll to Vuforia Engine AR and check for 10.5.  If Vuforia package is not available or an older version than 10.5 is available, close the Package Manager and navigate to the Asset Store - Window > Asset Store that will open in a browser.  You will need a Unity account.)</li>
         <li>In the Asset Store use the search field and type Vuforia Engine and Download latest version by clicking Open in Unity.  The Unity Package Manager will open and click the Import button at bottom right or Update if already downloaded.  Agree to terms as this is a third party application.  Once downloaded Import it into your project.  You may see warnings as the template we are using already has a scene and scripts.  Click ok to the warnings and then an Import Unity Package window will appear, click Import and then Update if necessary.  Accept the user agreement and close the Package Manager.</li>
@@ -82,7 +84,7 @@
             <li>Once generated, click into database and Add Target.  Ideally the image receives four stars as a targeting image.  <a href="https://library.vuforia.com/objects/best-practices-designing-and-developing-image-based-targets" target="_blank">Best Practices for Designing and Developing Image-Based Targets</a> (rich in detail, good contrast, no patterns, .png or .jpg and less than 2MB).</li>
             <li>The demo folder has two target images - arDemoPrint1.jpg and arDemoPrint2.jpg, add them one at a time.</li>
             <li>Width: 0.2413 (Vuforia uses meters)<br />
-              Unity (same as Vuforia) measures everything in meters. The demo images are 9.5"x8" which is equal to 24.13 cm x 20.32 cm, so in meters the image is: 0.2413, 0.2032282</li>
+              Unity (same as Vuforia) measures everything in meters. The demo images are 9.5"x8" which is equal to 24.13 cm x 20.32 cm, so in meters the image is: 0.2413, 0.2032282, but 0.2 is fine.</li>
           </ol>
         </li>
         <li>Click License Manager and copy License key.  It is necessary to work with your database in Unity.  The corresponding key will allow you to download the database into your Unity project</li>
@@ -124,7 +126,7 @@
         <li>In the Assets panel, create a new Folder, name it Textures.  Drag and drop the 2D image png file from the demo folder into the Textures folder (it's titled iroquoisNation.png).  2D images may be .jpg or .png.</li>
         <li>Select the newly imported image.  In the newly imported image Inspector, change the Texture Type to Sprite (2D and UI)</li>
         <li>In Assets, create a new folder and name it Materials</li>
-        <li>In the Materials folder, create a new material.  Name it Vuforia01</li>
+        <li>In the Materials folder, create a new material.  Name it IroquoisMaterial</li>
         <li>In the new material's Inspector, change the Rendering Mode to Transparent</li>
         <li>Also click the target next to Albedo and select the imported image.  Use the search field to find the image - iroquoisNation</li>
         <li>In the Hierarchy, select Plane, go to its Inspector and under Mesh Renderer > Materials - drag and drop the new material to apply the material to it or use the target button to add the material.</li>
