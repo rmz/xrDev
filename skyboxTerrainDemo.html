@@ -28,15 +28,10 @@
       <h1>Unity: Skybox &amp; Terrain Tools</h1>
       <p>Packages for today:</p>
       <ul>
-        <li>Via the Asset Store: <a href="https://assetstore.unity.com/packages/essentials/starter-assets-first-person-character-controller-196525" target="_blank">Starter Assets - First Person Character Controller</a>, for 2020.3.0 or higher, package size 1.82MB. Applying the FPC to a scene - use the prefabs: MainCamera, PlayerFollowCamera, PlayerCapsule.  PlayerCapsule (behaviour scripts) contains PlayerCameraRoot (head position) and Capsule (collider).  PlayerFollowCamera has a CinemachineVirtualCamera component with a Follow property, add the PlayerCameraRoot to the Follow property of the PlayerFollowCamera.  Use the sample scene of the StarterAssets to see set up.  This Unity FPC uses the <a href="https://unity.com/unity/features/editor/art-and-design/cinemachine" target="_blank">Cinemachine</a> package that is a suite of camera tools.  Unity Learn <a href="https://learn.unity.com/tutorial/cinemachine" target="_blank">Cinemachine tutorial</a>, 35 minutes.  (There are other first person controllers available on the Asset Store such as SUPER Character Controller...)</li>
-        <!--
-        UnityEngine.TerrainModule
-        https://docs.unity3d.com/2020.3/Documentation/ScriptReference/UnityEngine.TerrainModule.html
-        <li>Via the Asset Store: Terrain Tools (allows us to customize the terrain object) for Unity 5.2.4, last release date 2018</li>-->
-        <li>Via the Asset Store: Terrain Tools Sample Asset Pack https://bit.ly/terrain-assets</li>
-        <li>Via the Asset Store: <a href="https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153" target="_blank">Low-Poly Simple Nature Pack</a>, latest release 3/19/22, size 2MB, Unity 2018.4 or higher</li>
+        <li>Via the Asset Store: <a href="https://assetstore.unity.com/packages/essentials/starter-assets-first-person-character-controller-196525" target="_blank">Starter Assets - First Person Character Controller</a>, for 2020.3.0 or higher, package size 1.82MB. Applying the FPC to a scene - use the prefabs: MainCamera, PlayerFollowCamera, PlayerCapsule.  PlayerCapsule (behaviour scripts) contains PlayerCameraRoot (head position) and Capsule (collider).  PlayerFollowCamera has a CinemachineVirtualCamera component with a Follow property, add the PlayerCameraRoot to the Follow property of the PlayerFollowCamera.  FPC Controller <a href="https://youtu.be/LeFi2qKIzp4" target="_blank">overview</a>.  Use the sample scene of the StarterAssets to see set up.<br />
+        This Unity FPC uses the <a href="https://unity.com/unity/features/editor/art-and-design/cinemachine" target="_blank">Cinemachine</a> package that is a suite of camera tools.  Unity Learn <a href="https://learn.unity.com/tutorial/cinemachine" target="_blank">Cinemachine tutorial</a>, 35 minutes.  (There are other first person controllers available on the Asset Store such as SUPER Character Controller...)</li>
+        <li>Via the Asset Store: <a href="https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2018-4-32351" target="_blank">Standard Assets</a> - only for the Environment folder for its nature assets</li>
       </ul>
-      <p>Learning resources: <u>Unity in Action</u>, Chapter 4; <a href="https://youtu.be/PDKZXjyhwh0" target="_blank">Introducing the Terrain Editor, Unite Now 2020</a> (approximately 1 hour)</p>
       <p>File naming - keywords reserved by Unity and should not be used to name folders or files: Resources, Plugins, Editor, and Gizmos.</p>
     </section>
 
@@ -87,7 +82,23 @@
 
     <section class="fade">
       <h1>Unity: Textures</h1>
-      <p>Textures should be sized in powers of 2. For reasons of technical efficiency, graphics chips like to handle textures in sizes that are 2N: 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048... In your image editor (Photoshop, GIMP...), scale the downloaded image to 256 x 256, and save it as a PNG.  Popular resource for textures - <a href="https://www.textures.com/" target="_blank">textures.com</a> and <a class="dropdown-item" href="https://texturehaven.com/" target="_blank">TextureHaven</a></p>
+      <p>Textures should be sized in powers of 2. For reasons of technical efficiency, graphics chips like to handle textures in sizes that are 2N: 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048... In your image editor (Photoshop, GIMP...).  You can use non-square Textures like 512 x 64, just as long as the size remains a power of 2.  Popular resource for textures - <a href="https://www.textures.com/" target="_blank">textures.com</a> and <a class="dropdown-item" href="https://texturehaven.com/" target="_blank">TextureHaven</a></p>
+      <p><strong>Image Resolution</strong>, <a href="https://docs.unity3d.com/Manual/class-TextureImporterOverride.html" target="_blank">recommended texture formats</a></p>
+      <table>
+        <tr>
+          <td>Mobile</td>
+          <td>PC</td>
+        </tr>
+        <tr>
+          <td>Max 2048<br />(common for both mobile and PC)</td>
+          <td>2048, 4096, 8192, 16384<br />
+          HDR - high definition render packages commonly uses 4096<br />
+          <a href="https://docs.unity3d.com/Manual/ImportingTextures.html" target="_blank">recommendations according to graphics processing units (GPS)</td>
+        </tr>
+        <tr>
+          <td colspan="2">My recommendation is to stick with 2048 unless you are targeting high-end computers, then go with 4096.  You can always downsize, but you can not upgrade bitmaps without loss of quality</td>
+        </tr>
+      </table>
       <p>Textures can be part of materials, and materials are applied to geometry. A material is a set of information defining the properties of a surface; that information can include a texture to display on that surface.  Typically each texture goes with a different material, so for convenience Unity allows you to drop a texture onto a game object in the scene and then it creates a new material automatically.
       </p>
       <p>Texture coordinates are an extra set of values for each vertex that assign polygons to areas of the texture image. Think about it like wrapping paper; the 3D model is the box being wrapped, the texture is the wrapping paper, and the texture coordinates represent where on the wrapping paper each side of the box will go.  From Unity in Action: texture coordinates in appendix C.</p>
@@ -95,9 +106,10 @@
 
     <section class="fade">
       <h1>Unity: Textures</h1>
-      <p><a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterAlbedoColor.html" target="_blank">Albedo</a> (technical term for the base color, all the shadows and highlights have been removed)<br />
-        <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html" target="_blank">Normal Map</a> (Photoshop: Filter > 3D > Generate Normal Map - violet - in Unity must be imported as Texture Type: Normal map)<br />
-        <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterHeightMap.html" target="_blank">Height or Bump Map</a> (Photoshop: Filter > 3D > Generate Bump (Height) map - grayscale - white areas representing the high areas of your texture and black representing the low areas.)<br />
+      <p><a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterAlbedoColor.html" target="_blank">Albedo</a>: technical term for the base color, all the shadows and highlights have been removed<br />
+        <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html" target="_blank">Normal Map</a>:  use RGB channels to create the illusion of depth. The dark to light values in each the Red, Green and Blue channels are used to have lighter areas pop out whereas dark values recede to create a visual representation of depth. Generate using Photoshop: Filter > 3D > Generate Normal Map - violet - in Unity must be imported as Texture Type: Normal map.<br />
+        <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterHeightMap.html" target="_blank">Height or Bump Map</a>: use luminosity to create the illusion of depth. Bump maps read light and dark areas - luminous values - white creates the illusion of pushing out the pixels - pushing them at you, black the illusion of pushing in the pixels away from you. Although it is a 2D image, light and dark are used to simulate depth or as if it was a 3D object - as if it had depth on the z-index. Generate using Photoshop: Filter > 3D > Generate Bump (Height) map - grayscale - white areas representing the high areas of your texture and black representing the low areas.<br />
+        (The default settings for Blur (0.5) and Detail (80%) tend to work well, but you should experiment with different values and apply them in Unity to achieve the level of detail that you wish.)<br />
         <img src="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@7.1/manual/Images/MaskMapAndDetailMap3.png" width="400" /><br />
         <a href="https://help.poliigon.com/en/articles/1712652-what-are-the-different-texture-maps-for" target="_blank">What are the different texture maps for?</a>;   <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterDetail.html" target="_blank">Secondary Maps and Detail Mask</a>
       </p>
@@ -197,6 +209,7 @@
           <li><a href="https://assetstore.unity.com/packages/3d/environments/industrial/rpg-fps-game-assets-for-pc-mobile-industrial-set-v2-0-86679" target="_blank">RPG/FPS Game Assets for PC/Mobile (Industrial Set v2.0)</a></li>
           <li><a href="https://assetstore.unity.com/packages/3d/vegetation/trees/conifers-botd-142076" target="_blank">Conifer Tree Collection</a></li>
           <li><a href="https://assetstore.unity.com/packages/3d/environments/sci-fi/snaps-prototype-sci-fi-industrial-136759" target="_blank">Sci-fi Industrial Snap Pack</a></li>
+          <li><a href="https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153" target="_blank">Low-Poly Simple Nature Pack</a>, latest release 3/19/22, size 2MB, Unity 2018.4 or higher</li>
         </ul>
     </section>
 
