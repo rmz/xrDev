@@ -28,25 +28,20 @@
       <h1>Unity: Skybox &amp; Terrain Tools</h1>
       <p>Packages for today:</p>
       <ul>
-        <li>Via the Asset Store: Standard Assets (we'll be using the first person controller)</li>
-        <li>Via the Package Manager look for the Advanced tab at the top center of the Package Manager and turn on Show Preview Packages: Terrain Tools (allows us to customize the terrain object)</li>
-        <li>Via the Asset Store: Terrain Tools Sample Asset Pack</li>
-        <li>Via the Asset Store: Low-Poly Simple Nature Pack</li>
+        <li>Via the Asset Store: <a href="https://assetstore.unity.com/packages/essentials/starter-assets-first-person-character-controller-196525" target="_blank">Starter Assets - First Person Character Controller</a>, for 2020.3.0 or higher, package size 1.82MB. Applying the FPC to a scene - use the prefabs: MainCamera, PlayerFollowCamera, PlayerCapsule.  PlayerCapsule (behaviour scripts) contains PlayerCameraRoot (head position) and Capsule (collider).  PlayerFollowCamera has a CinemachineVirtualCamera component with a Follow property, add the PlayerCameraRoot to the Follow property of the PlayerFollowCamera.  Use the sample scene of the StarterAssets to see set up.  This Unity FPC uses the <a href="https://unity.com/unity/features/editor/art-and-design/cinemachine" target="_blank">Cinemachine</a> package that is a suite of camera tools.  Unity Learn <a href="https://learn.unity.com/tutorial/cinemachine" target="_blank">Cinemachine tutorial</a>, 35 minutes.  (There are other first person controllers available on the Asset Store such as SUPER Character Controller...)</li>
+        <!--
+        UnityEngine.TerrainModule
+        https://docs.unity3d.com/2020.3/Documentation/ScriptReference/UnityEngine.TerrainModule.html
+        <li>Via the Asset Store: Terrain Tools (allows us to customize the terrain object) for Unity 5.2.4, last release date 2018</li>-->
+        <li>Via the Asset Store: Terrain Tools Sample Asset Pack https://bit.ly/terrain-assets</li>
+        <li>Via the Asset Store: <a href="https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153" target="_blank">Low-Poly Simple Nature Pack</a>, latest release 3/19/22, size 2MB, Unity 2018.4 or higher</li>
       </ul>
       <p>Learning resources: <u>Unity in Action</u>, Chapter 4; <a href="https://youtu.be/PDKZXjyhwh0" target="_blank">Introducing the Terrain Editor, Unite Now 2020</a> (approximately 1 hour)</p>
-    </section>
-
-    <section class="fade">
-      <h1>Unity: Standard Assets</h1>
-      <p>When importing the Standard Assets to your project, we'll only be using the First Person Controller, so you do not need to import everything.  The following will be sufficient:<br />
-      <img src="img/standardAssets.png" alt="Unity Standard Assets" /></p>
-      <p>NOTE: Old code error on SimpleActivatorMenu.cs - line 11 fix: <br />
-      public UnityEngine.UI.Text camSwitchButton;</p>
       <p>File naming - keywords reserved by Unity and should not be used to name folders or files: Resources, Plugins, Editor, and Gizmos.</p>
     </section>
 
     <section class="fade">
-      <h1>Unity: Art Assets, Unity in Action pg 82</h1>
+      <h1>Unity: Art Assets, Unity in Action pg 76</h1>
       <table>
         <tr>
           <td><strong>2D image</strong></td>
@@ -92,18 +87,17 @@
 
     <section class="fade">
       <h1>Unity: Textures</h1>
-      <p>Textures should be sized in powers of 2. For reasons of technical efficiency, graphics chips like to handle textures in sizes that are 2N: 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048... In your image editor (Photoshop, GIMP...), scale the downloaded image to 256 x 256, and save it as a PNG.  Excellent resource for textures - <a class="dropdown-item" href="https://texturehaven.com/" target="_blank">TextureHaven</a> and <a href="https://www.textures.com/" target="_blank">textures.com</a></p>
-      <p>Textures can be part of materials, and materials are applied to geometry. A material is a set of information defining the properties of a surface; that information can include a texture to display on that surface.  Typically each texture goes with a different material, so for convenience Unity allows you to drop a texture onto an object and then it creates a new material automatically. That is, if you drag a texture from Project view onto an object in the scene, Unity will create a new material and apply the new material to the object.
+      <p>Textures should be sized in powers of 2. For reasons of technical efficiency, graphics chips like to handle textures in sizes that are 2N: 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048... In your image editor (Photoshop, GIMP...), scale the downloaded image to 256 x 256, and save it as a PNG.  Popular resource for textures - <a href="https://www.textures.com/" target="_blank">textures.com</a> and <a class="dropdown-item" href="https://texturehaven.com/" target="_blank">TextureHaven</a></p>
+      <p>Textures can be part of materials, and materials are applied to geometry. A material is a set of information defining the properties of a surface; that information can include a texture to display on that surface.  Typically each texture goes with a different material, so for convenience Unity allows you to drop a texture onto a game object in the scene and then it creates a new material automatically.
       </p>
       <p>Texture coordinates are an extra set of values for each vertex that assign polygons to areas of the texture image. Think about it like wrapping paper; the 3D model is the box being wrapped, the texture is the wrapping paper, and the texture coordinates represent where on the wrapping paper each side of the box will go.  From Unity in Action: texture coordinates in appendix C.</p>
     </section>
 
     <section class="fade">
       <h1>Unity: Textures</h1>
-      <p>Albedo (technical term for the base color, all the shadows and highlights have been removed)<br />
-        Diffuse<br />
-        Normal Map<br />
-        Mask Map<br />
+      <p><a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterAlbedoColor.html" target="_blank">Albedo</a> (technical term for the base color, all the shadows and highlights have been removed)<br />
+        <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html" target="_blank">Normal Map</a> (Photoshop: Filter > 3D > Generate Normal Map - violet - in Unity must be imported as Texture Type: Normal map)<br />
+        <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterHeightMap.html" target="_blank">Height or Bump Map</a> (Photoshop: Filter > 3D > Generate Bump (Height) map - grayscale - white areas representing the high areas of your texture and black representing the low areas.)<br />
         <img src="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@7.1/manual/Images/MaskMapAndDetailMap3.png" width="400" /><br />
         <a href="https://help.poliigon.com/en/articles/1712652-what-are-the-different-texture-maps-for" target="_blank">What are the different texture maps for?</a>;   <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterDetail.html" target="_blank">Secondary Maps and Detail Mask</a>
       </p>
@@ -115,15 +109,17 @@
       <p>New Material, Shader > Skybox > 6 Sided</p>
       <p>A skybox is a cube surrounding the camera with pictures of the sky on each side. No matter what direction the camera is facing, it’s looking at a picture of the sky.</p>
       <p>Select imported texture to see its properties in the Inspector, and change the Wrap Mode setting from Repeat to Clamp.  Be sure to click Apply. Ordinarily, textures can be tiled repeatedly over a surface; for this to appear seamless, opposite edges of the image bleed together. But this blending of edges can create faint lines in the sky where images meet, so the Clamp setting will limit the boundaries of the texture and get rid of this blending.</p>
-      <p>Apply the new Skybox: Top Unity Menu - Window > Rendering > Lighting - select your new Skybox Material to apply it to the scene.</p>
-      <p>Toggle on or off in Effects button at top of Scene view.</p>
-      <p>Alternatively, you could create a Procedural Sky - <a href="https://youtu.be/UIbkfVWYRWQ" target="_blank">Quick Tutorial for Unity 2017</a>, but works the same for Unity 2019.4 3D Template</p>
+      <p>Apply the new Skybox: Top Unity Menu - Window > Rendering > Lighting > Environment tab and select your new Skybox Material to apply it to the scene.</p>
+      <p>Toggle on or off in skybox, fog and effects button at top of Scene view.</p>
+      <p>Alternatively, you could create a <a href="https://docs.unity3d.com/Manual/shader-skybox-procedural.html" target="_blank">Procedural Sky</a> - this is entrely based on Material settings: in the Assets folder create a new material and in its Inspector select Shader Skybox > Procedural and play with the settings - Sun, Sun Size, Atmosphere, Sky Tint, Ground, Exposure.  Apply it by going to Window > Rendering > Lighting > Environment tab and select your new Procedural Skybox as the Skybox Maerial</p>
+      <p>If you use <a href="https://wwwtyro.github.io/" target="_blank">wwwtyro.net</a> (linked from the syllabus Assets menu), the left and right downloaded textures are reversed in Unity.</p>
     </section>
 
     <section class="fade">
-      <h1>Unity: Create Natural Environment by Terrain Sculpting</h1>
+      <h1>Unity: Create Natural Environment by <a href="https://docs.unity3d.com/Manual/CreatingEnvironments.html" target="_blank">Terrain Sculpting</a></h1>
       <ol>
-        <li>In your Scene Hierarchy, Create Terrain</li>
+        <li>In your Scene Hierarchy, Create Terrain (default 1000 meters)</li>
+        <li>For demonstration, I will change the Terrain settings to a Terrain Width, Length and Height of 100.</li>
         <li>With Terrain selected, in the inspector click the padlock - the lock button - this way you can focus on creating your terrain and not worry about accidentally deselecting the terrain while you are sculpting it.</li>
         <li>Inspector > Raise or Lower Terrain - uniform vs noisy brushes</li>
         <li>Modify the Stroke:
@@ -144,13 +140,12 @@
         </li>
         <li>The Terrain game object offers many brushes to work with, a few examples are:
           <ul>
-            <li>Brushes > Sculpt > Terrace and Terrace Controls - to create a terraced mountainscape</li>
-            <li>Erosion tool - Wind Erosion to mimic the effect of wind</li>
-            <li>Brushes > Sculpt > Bridge - control click two points to create a bridge from point A to point B - useful to create roads and bridges</li>
+            <li>Brushes > Raise and Lower Terrain</li>
+            <li>Brushes > Paint Texture and Create Terrain Layers to create a diverse topography</li>
             <li>Set Height - sets the height of the terrain, say for example you want to add a foundation for a structure or settlement, the Set Height will level the selected area - flatten it</li>
           </ul>
         </li>
-        <li>Create a neighboring terrain by selecting the Neighboring Terrain tab in the terrain component.  Click in the scene view to create an adjacent terrain.  This expands your terrain to create a more massive world with the adjacent terrains fluidly welded to your initial terrain.</li>
+        <li>Create a neighboring terrain by selecting the Neighboring Terrain button.  Click in the scene view to create an adjacent terrain.  This expands your terrain to create a more massive world with the adjacent terrains fluidly welded to your initial terrain.</li>
       </ol>
     </section>
 
@@ -201,7 +196,7 @@
         <ul>
           <li><a href="https://assetstore.unity.com/packages/3d/environments/industrial/rpg-fps-game-assets-for-pc-mobile-industrial-set-v2-0-86679" target="_blank">RPG/FPS Game Assets for PC/Mobile (Industrial Set v2.0)</a></li>
           <li><a href="https://assetstore.unity.com/packages/3d/vegetation/trees/conifers-botd-142076" target="_blank">Conifer Tree Collection</a></li>
-          <li><a href="https://assetstore.unity.com/packages/3d/environments/sci-fi/snaps-prototype-sci-fi-industrial-136759" target="_blank">Sci-fi Industrial Snap Pack</a></li>    
+          <li><a href="https://assetstore.unity.com/packages/3d/environments/sci-fi/snaps-prototype-sci-fi-industrial-136759" target="_blank">Sci-fi Industrial Snap Pack</a></li>
         </ul>
     </section>
 
