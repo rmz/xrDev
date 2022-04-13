@@ -20,7 +20,7 @@
     <section class="fade">
       <h1>Unity C# Scripting Basic Interaction</h1>
       <h2><a href="https://docs.unity3d.com/Manual/class-PhysicMaterial.html" target="_blank">Physical Material</a></h2>
-      <p>Unity offers an excellent set of physics algorithms.  By adding a <a href="https://docs.unity3d.com/Manual/class-BoxCollider.html" target="_blank">Collider component</a> to any game object, you can give it a physics material to adjust friction and bouncing effects of colliding objects.  It's important to note that if the "Is Trigger" property is turned on, the collider is used for triggering events and is ignored by the physics engine.  However, you can add two colliders - one with "Is Trigger" off and will be effected by the physics of your project and a second to act as a trigger.</p>
+      <p>Unity offers an excellent set of physics algorithms.  By adding a <a href="https://docs.unity3d.com/Manual/class-BoxCollider.html" target="_blank">Collider component</a> to any game object, you can give it a <a href="https://docs.unity3d.com/Manual/class-PhysicMaterial.html" target="_blank">physics material</a> to adjust friction and bouncing effects of colliding objects.  It's important to note that if the "Is Trigger" property is turned on, the collider is used for triggering events and is ignored by the physics engine.  However, you can add two colliders - one with "Is Trigger" off and will be effected by the physics of your project and a second to act as a trigger.</p>
       <p>By adding a <a href="https://docs.unity3d.com/Manual/class-Rigidbody.html" target="_blank">Rigidbody component</a> to any game object, you can give it gravity and act under the control of physics. The Rigidbody can receive forces and torque to make your objects move in a realistic way.</p>
       <p>This means that objects to interact with need:</p>
         <ul>
@@ -35,9 +35,9 @@
         <ol>
           <li>In your Assets window right click and select Create > Physics Material. Name it Bounce or Ball...</li>
           <li>Change the default properties of the material.  Dynamic Friction and Static Friction are by default 0.6, a fraction of 1, because when you multiply fractions you end up with a smaller and smaller number, until it gets to 0 as things come to a hault.  If you intend to mimic realism, leave these values at 0.6 and change Bounciness to the same value - 0.6.  (If for example it was 1 - 1x1=1 and it would never stop bouncing.)</li>
+          <li><strong>Dynamic, Static and Bounciness are designed to be kept at a value from 0 to 1.</strong></li>
           <li>Friction Combine - Average - two friction values are averaged.</li>
           <li>Bounce Combine - Maximum - the largest friction of two values is used.</li>
-          <li><strong>Dynamic, Static and Bounciness are designed to be kept at a value from 0 to 1.</strong></li>
           <li>Apply the new Phyiscal Material to your bouncy game object through it's collider in the Material field.</li>
           <li>If you click the target button on the collider Material field, you will see the default surface physical materials of Unity - Carpet, Concrete, Grass, Gravel, Max Friction, Wood, Zero Friction, along with any new Physical Materials that you created.</li>
         </ol>
@@ -46,15 +46,16 @@
       <section class="fade">
         <h1>Unity C# Scripting Basic Interaction</h1>
         <h2>Picking Up and Throwing Objects</h2>
+        <p>This demo uses <a href="https://assetstore.unity.com/packages/tools/game-toolkits/super-character-controller-135316" target="_blank">Super Character Controller</a>, but broken apart and edited to work with scripts.</p>
         <p>
           Mouse down to pickup object and mouse up drops object, right click to throw object...  References: <a href="https://docs.unity3d.com/ScriptReference/Input.html" target="_blank">Input</a> and <a href="https://docs.unity3d.com/ScriptReference/KeyCode.html" target="_blank">KeyCode</a>
         </p>
         <p>
-        Add empty object to FPS and put it infront of the player - that is where the picked up game object will be visible from the perspective of the player.</p>
+        Add empty object to FPC and put it infront of the player - that is where the picked up game object will be visible from the perspective of the player.</p>
         <p>Goals of the script:</p>
         <ol>
           <li>Turn off gravity on the object to be picked up.</li>
-          <li>Move the transfrom position of the object that is picked up to the transform position of the empty game object of the FPS.  Do so by parent the picked up object to the empty game object </li>
+          <li>Move the transfrom position of the object that is picked up to the transform position of the empty game object of the FPC.  Do so by parent the picked up object to the empty game object </li>
           <li>Make it throwable in the direction that the player is facing and based on the mass of the object</li>
         </ol>
     </section>
@@ -63,7 +64,7 @@
       <h1>Unity C# Scripting Basic Interaction</h1>
       <h2>Playing and Pausing Audio</h2>
       <p>
-        Unity <a href="https://docs.unity3d.com/Manual/Audio.html" target="_blank">Audio</a> may be 2D and playing at the same level throughout the environment such as a Narrator that inroduces your project.  Or you can have audio be 3D and placed in a specific location or attached to a game object, for example the sound of steps on the FPS controller. You set an Audio Source component to 2D or 3D using the "Spatial Blend" setting.</p>
+        Unity <a href="https://docs.unity3d.com/Manual/Audio.html" target="_blank">Audio</a> may be 2D and playing at the same level throughout the environment such as a Narrator that inroduces your project.  Or you can have audio be 3D and placed in a specific location or attached to a game object, for example the sound of steps on the FPC controller. You set an Audio Source component to 2D or 3D using the "Spatial Blend" setting.</p>
       <p>If it is ambient sound consistently in the background, you can have it Play On Awake and Loop.</p>
       <p>You can have the audio triggered by contact with the player or when the player touches another game object that is a trigger.  In the second scenario, the Audio Source is a component of a separate game object.</p>
       <p>Triggering Audio to Play:</p>
@@ -97,7 +98,7 @@
   <h2>Deleting Game Objects</h2>
   <p>Use the <a href="https://docs.unity3d.com/ScriptReference/Object.Destroy.html" target="_blank">Object.Destroy</a> to delete unnecessary game objects from your game and get better performance.</p>
   <p>In the example scene, there is a larger plane below the ground named DestroyPlane in the hierarchy.  This plane has the DestroyGameObject.cs script as a component.  The script is set up to destroy any game object that collides with it.  The Mesh Collider for this plane must have the Convex and Is Trigger turned on.</p>
-  <p>Commented out in the DestroyGameObject.cs script is an alternative use of the same script file to target game objects with a specific Tag.  Recall that in the Inspector, you may give your game objects a Tag.</p>
+  <p>Commented out in the DestroyGameObject.cs script are alternative uses of the same script file.  One is to reset the player at it's starting x,y,z position and destroy all other game objects.  And a third option that is commented out is to target game objects with a specific tag.  In the Inspector, you may give your game objects a Tag...</p>
   <!--Next week:
   ChaseAI.cs
   Spawn.cs - onto an empty game object to spawn whatever, give it a prefab and prefab target. End Target has DestroyObject.cs.-->
