@@ -36,28 +36,28 @@
       <h2>XR Plug-in Management &amp; XR Interaction Toolkit</h2>
       <ul>
         <li>Create a duplicate of your project or save a back up on a drive</li>
-        <li>Your Unity Install will require the Android module as Oculus runs on Android.  Other headsets will require the Windows module.
-        <br />Note on developing for Oculus Quest - you must download the Oculus app to your smart phone and pair it with your headset and in the phone app go to <a href="https://developer.oculus.com/documentation/native/android/mobile-device-setup/" target="_blank">Settings and turn on Developer tools</a>; this will allow you to build directly from Unity to your Oculus Quest when it is tethered via USB</li>
-        <li>Since we are building to Oculus, go to File > Build Settings; under Platform select Android and click Switch Platform (near bottom right)</li>
+        <li>Your Unity Editor Install will require the Android module as Oculus runs on Android.  Other headsets will require the Windows module.</li>
         <li>Install XR Plugin Management from either Project Settings or Package Manager</li>
+      </ul>
+      <h3>Install via the Project Settings</h3>
           <ul>
-            <li>Go to Edit > Project Settings > XR Plug-in Management</li>
-            <li>Install it</li>
-            <li>Once XR Plug-in Management is installed, select Windows tab and install Open XR</li>
-            <li>The new input systemt will require the project to close and reload</li>
+            <li>Go to Edit > Project Settings > XR Plug-in Management (last settings column)</li>
+            <li>Click Install XR Plugin Management</li>
+            <li>Once XR Plug-in Management is installed, select it again in left column.  Select Windows tab and install Open XR.  The new input systemt will require the project to close and reload</li>
             <li>When it reopens, in the Project Settings window, under XR Plug-in Management, Open XR should be available and the package downloaded and imported into the project</li>
-            <li>Check on OpenXR, if there are incompatabilities there will be a red button with exclamation, click it to open OpenXR Project Validation and Fix All.</li>
-            <li>Add Interaction Profile (in Android and Windows tabs) - target headset - Oculus</li>
-            <li>Android tab - Render Mode: Multi Pass - renders scene for each eye, requires greater processing but the presentation is much better.  (Same for Windows if targeting a Windows device.)</li>
+            <li>Check on OpenXR (if not already checked), if there are incompatabilities there will be a red button with exclamation, click it to open OpenXR Project Validation and Fix All.  OpenXR requires an interaction profile - this is the build platform, in this case Oculus.</li>
+            <li>In the Project Settings left column select OpenXR (parented to XR Plug-in Management)</li>
+            <li>Add Interaction Profile - do this for both Windows tab and Android tab:<br />
+            Under Interactions Profile click the + icon on the right and select Oculus Touch Controller Profile</li>
+            <li>Android tab (with OpenXR selected in left column) - Render Mode: Multi Pass - renders scene for each eye, requires greater processing but the presentation is much better.  (Same for Windows if targeting a Windows device.)</li>
             <li>Close Project Settings and in Assets panel project will have a new XR folder.</li>
-            <li>Adding XR Interaction Toolkit (current version 2.0.1)<br />
-              Go to - Windows > Package Manager > Click the clog icon next to the search field and select "Advanced Project Settings" that will open the Project Settings > Package Manager > Advanced Settings and click on Enable Preview Packages.  Close Project Settings</li>
-            <li>In the Package Manager window, select Packages: Unity Registry (top left) and scroll down to find XR Interaction Toolkit</li>
+            <li>Adding XR Interaction Toolkit (current version 2.0.1)</li>
+            <li>In the Package Manager window, select Packages: Unity Registry (top left) and scroll down to find XR Interaction Toolkit.  If it is not available, click the cog icon next to the search field and select "Advanced Project Settings" that will open the Project Settings > Package Manager > Advanced Settings and click on Enable Preview Packages.  Close Project Settings</li>
             <li>Install XR Interaction Toolkit; collapse Samples and Import Starter Assets and XR Device Simulator</li>
             <li>The Assets folder will now have XRI and Samples folders</li>
-            <li>In the Assets navigate to - Samples > XR Interaction Toolkit > 2.0.1 > Starter Assets.  Here you will find all the scripts for VR movement and interaction: XRI Default Continuous Move, XRI Default Continuous Turn, XRI Default Left Controller, XRI Default Right Controller, XRI Default Snap Turn - <strong>click the button for each - Add to Action...</strong> these modes of interaction will be added to the projects presets.  The XRI Default Input Actions presents a list of all the possible actions via the VR controllers.</li>
-            <li>Go to Edit > Project Settings again and view Preset Manager where you will see all the presets just added.  The XRI Default Right Controller and XRI Default Left Controller require the addition of typing in right and left under Filter (on the left).</li>
-            <li>Go to Window > Package Manager, click the + sign (top left) and choose Add package from git URL and type into the field: com.unity.xr.openxr</li>
+            <li>In the Assets navigate to - Samples > XR Interaction Toolkit > 2.0.1 > Starter Assets.  Here you will find all the scripts for VR movement and interaction: XRI Default Continuous Move, XRI Default Continuous Turn, XRI Default Left Controller, XRI Default Right Controller, XRI Default Snap Turn.  In the Inspector for each of these assets <strong>click the button - Add to Action...</strong> these modes of interaction will be added to the projects presets.  The XRI Default Input Actions presents a list of all the possible actions via the VR controllers.</li>
+            <li>Go to Edit > Project Settings again and from the left column select Preset Manager where you will see all the presets just added.  The XRI Default Right Controller and XRI Default Left Controller require the addition of typing in right and left under Filter (on the left).</li>
+            <!--<li>Go to Window > Package Manager, click the + sign (top left) and choose Add package from git URL and type into the field: com.unity.xr.openxr</li>-->
             <li>Go to Windows > Package Manager > Unity Registry and install Oculus XR Plugin</li>
 
             <br /><strong>Alternatively one can use the Package Manager</strong><br />
@@ -80,7 +80,7 @@
         <li>To the Hierarchy add XR > XR Origin (Action-based) - will add two game objects - XR Interaction Manager and XR Origin.  (Use Action-based for all VR movement.)</li>
         <li>To XR Interaction Manager add the component "Input Action Manager"</li>
         <li>To the Input Action Manager, collapse Action Assets and add XRI Default Input Actions (the collection and mapping of possible actions)</li>
-        <li>XR Origin (previously XR Rig) will have Camera Offset parent to Main Camera, Left Hand Controller and Right Hand Controller.  Make sure that Left and Right Controllers appropriately mapped to left and right hands (if presets were set correctly should be good).</li>
+        <li>XR Origin (previously XR Rig) will have Camera Offset parent to Main Camera (the default Main Camera was deleted), Left Hand Controller and Right Hand Controller.  Make sure that Left and Right Controllers appropriately mapped to left and right hands (if presets were set correctly should be good).</li>
         <li>To the Hierarchy add XR > Locomotion System (Action-based).  In it's Inspector drag XR Origin from Hierarchy to XR Origin field.</li>
         <li>To your ground game object in the Hierarchy whether it's a Plane, Cube or Terrain, add as a component in the ground's Inspector Teleportation Area to define the area that the user may teleport in</li>
         <li>If you wish to use direct movment (instead of teleportation or in addition to teleportation), select the Locomotion System and in its Inspector turn off Teleportation Provider and Snap Turn Provider.  Instead add the Continuous Move Provider (Action-based) and Continuous Turn Provider (Action-based)</li>
@@ -103,16 +103,21 @@
       <h2>Building Unity Project to Quest</h2>
       <h3>Setting up Oculus and Oculus App</h3>
       <ul>
-        <li>Create an account or join an organization on <a href="https://developer.oculus.com/" target="_blank">Oculus for Developers</a>.  This requires Facebook account.</li>
-        <li>The Oculus Quest must be online via wifi.  Download Oculus phone app (Android or iOS) and make sure that both the Quest and phone are on the same wifi.</li>
-        <li>In the phone app, log in, now requires FaceBook account.  Go to Menu (bottom right icon) and select Devices.  As long as Quest is nearby and on same wifi, the app should find it and show Connected.</li>
-        <li>In the Devices window go to Developer Settings and turn on Developer Mode.</li>
-        <li>In Oculus go to Settings > System > Developer and turn on USB Connection Dialog</li>
+        <li>Create an Oculus developer account or join an organization on <a href="https://developer.oculus.com/" target="_blank">Oculus for Developers</a>.  This requires Facebook account.</li>
+        <li>Download the Oculus app, sign in with your Oculus developer account.</li>
+        <li>Have both the Oculus and your phone on the same wifi</li>
+        <li>Pair your smart phone with your headset.  Go to Menu (bottom right icon) and select Devices.  As long as Quest is nearby and on same wifi, the app should find it and show Connected.</li>
+        <li>In the phone app go to <a href="https://developer.oculus.com/documentation/native/android/mobile-device-setup/" target="_blank">Settings and turn on Developer tools</a> - in the "Devices" window go to Developer Settings and turn on Developer Mode. This will allow you to build directly from Unity to your Oculus Quest when it is tethered via USB</li>
+        <li>In the Oculus go to Settings > System > Developer and turn on USB Connection Dialog</li>
         <li>When connect to the computer Allow access to data</li>
-        <li>In Oculus you can find your builds in App Library > Unknown Sources</li>
+        <li>In the Oculus you can find your builds in App Library > Unknown Sources</li>
       </ul>
+    </section>
+
+    <section class="fade">
       <h3>Preparing Unity Project for Oculus Build</h3>
       <ul>
+        <li>Since we are building to Oculus, go to File > Build Settings; under Platform select Android and click Switch Platform (near bottom right)</li>
         <li>From the top menu go to Edit > Project Settings, make sure that XR Interaction Toolkit, XR Plug-in Management and under XR Plug-in Management, Oculus and OpenXR are installed</li>
         <li>Click on XR Plug-in Management, click on Android tab and select Oculus</li>
         <li>Open the Build Settings, target Android as Oculus is an Android device</li>-->
