@@ -40,7 +40,7 @@
         <li>Install XR Plugin Management from either Project Settings or Package Manager</li>
       </ul>
       <h3>Install via the Project Settings</h3>
-          <ul>
+          <ol>
             <li>Go to Edit > Project Settings > XR Plug-in Management (last settings column)</li>
             <li>Click Install XR Plugin Management</li>
             <li>Once XR Plug-in Management is installed, select it again in left column.  Select Windows tab and install Open XR.  The new input systemt will require the project to close and reload</li>
@@ -59,23 +59,22 @@
             <li>Go to Edit > Project Settings again and from the left column select Preset Manager where you will see all the presets just added.  The XRI Default Right Controller and XRI Default Left Controller require the addition of typing in right and left under Filter (on the left).</li>
             <!--<li>Go to Window > Package Manager, click the + sign (top left) and choose Add package from git URL and type into the field: com.unity.xr.openxr</li>-->
             <li>Go to Windows > Package Manager > Unity Registry and install Oculus XR Plugin</li>
+          </ol>
 
             <br /><strong>Alternatively one can use the Package Manager</strong><br />
 
-            <li>Install from Package Manager > Unity Registry (with Advanced Project Settings turned on):
-              <br />XR Plugin Management
-              <br />XR Interaction Toolkit; collapse Samples and Import Starter Assets and XR Device Simulator
-              <br />Oculus XR Plugin
-            </li>
+            <h3>Install from Package Manager > Unity Registry (with Advanced Project Settings turned on):</h3>
+            <ol>
+              <li>>XR Plugin Management</li>
+              <li>XR Interaction Toolkit; collapse Samples and Import Starter Assets and XR Device Simulator</li>
+              <li>Oculus XR Plugin</li>
             <li>Follow the steps above for the Project Settings</li>
-          </ul>
-        </li>
-      </ul>
+          </ol>
     </section>
 
     <section class="fade">
       <h2>Setting up the VR Player in the Scene</h2>
-      <ul>
+      <ol>
         <li>The Hierarchy will now have XR game objects to introduce to your scene</li>
         <li>To the Hierarchy add XR > XR Origin (Action-based) - will add two game objects - XR Interaction Manager and XR Origin.  (Use Action-based for all VR movement.)</li>
         <li>To XR Interaction Manager add the component "Input Action Manager"</li>
@@ -86,23 +85,23 @@
         <li>If you wish to use direct movment (instead of teleportation or in addition to teleportation), select the Locomotion System and in its Inspector turn off Teleportation Provider and Snap Turn Provider.  Instead add the Continuous Move Provider (Action-based) and Continuous Turn Provider (Action-based)</li>
         <li>To only enable left hand joystick for motion, in the Continuous Move Provider, uncheck Right Hand Move Action</li>
         <li>To only enable right hand joystick for turning, in the Continuous Turn Provider, uncheck Left Hand Move Action</li>
-      </ul>
+      </ol>
     </section>
 
     <section class="fade">
       <h2>Making Game Objects Interactable</h2>
-      <ul>
+      <ol>
         <li>To pick things up: select the game object and in its Inspector add the component XR Grab Interactable</li>
         <li>In the XR Grab Interactable turn on Smooth Position and Smooth Rotation.</li>
         <li>Also in the XR Grab Interactable try the different Movement Type options - Instantaneous (hand teleports with the movement of the hand), Kinematic (obect slowly moves with the hand), Veloicty Tracking (simply moves with you and most natural appearing movement).</li>
         <li>When the player is turning using the righ hand joystick, the object that is being held will also turn.  To turn this off, in the Hierarchy collapse XR Origin and Camera Offset and select both LeftHand Controller and RightHand Controller and in their Inspector scroll to XR Ray Interactor and uncheck Anchor Control.</li>
-      </ul>
+      </ol>
     </section>
 
     <section class="fade">
       <h2>Building Unity Project to Quest</h2>
       <h3>Setting up Oculus and Oculus App</h3>
-      <ul>
+      <ol>
         <li>Create an Oculus developer account or join an organization on <a href="https://developer.oculus.com/" target="_blank">Oculus for Developers</a>.  This requires Facebook account.</li>
         <li>Download the Oculus app, sign in with your Oculus developer account.</li>
         <li>Have both the Oculus and your phone on the same wifi</li>
@@ -111,16 +110,16 @@
         <li>In the Oculus go to Settings > System > Developer and turn on USB Connection Dialog</li>
         <li>When connect to the computer Allow access to data</li>
         <li>In the Oculus you can find your builds in App Library > Unknown Sources</li>
-      </ul>
+      </ol>
     </section>
 
     <section class="fade">
       <h3>Preparing Unity Project for Oculus Build</h3>
-      <ul>
+      <ol>
         <li>Since we are building to Oculus, go to File > Build Settings; under Platform select Android and click Switch Platform (near bottom right)</li>
         <li>From the top menu go to Edit > Project Settings, make sure that XR Interaction Toolkit, XR Plug-in Management and under XR Plug-in Management, Oculus and OpenXR are installed</li>
         <li>Click on XR Plug-in Management, click on Android tab and select Oculus</li>
-        <li>Open the Build Settings, target Android as Oculus is an Android device</li>-->
+        <li>Open the Build Settings, target Android as Oculus is an Android device</li>
         <li>Edit > Project Settings, click on Player Settings and in Other Settings set the minimum level to Android 6.0 'Marshmallow' (API level 23)</li>
         <li>In Build Settings, use the following options:<br />
           Texture Compression: Don't override<br />
@@ -128,7 +127,7 @@
           Run Device: Oculus Quest (if Oculus connected via USB)<br />
           Compression Method: LZ4</li>
         <li>Click Build and Run</li>
-      </ul>
+      </ol>
       <h3>Unfotunately OpenXR Is Building App as 2D Windowed App in Oculus</h3>
       <p>Fix for now:</p>
         <ul>
